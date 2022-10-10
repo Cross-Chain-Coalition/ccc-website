@@ -1,0 +1,53 @@
+@import "libraries/fonts";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "League Spartan", -apple-system, sans-serif;
+  color: #09032F;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: black;
+    background: white;
+  }
+}
+
+.section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  position: relative;
+}
+
+h1 {
+  font-size: 72px;
+}
+
+.container {
+  max-width: 80%;
+}
+
+/* Hero section */
+
+.btn-hero {
+  border-radius: 100px;
+  border: 2px solid #000000;
+  padding: 10px 40px;
+  background: #5252FF;
+  color: white;
+  font-family: "Space Grotes", -apple-system, sans-serif;
+}
