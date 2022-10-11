@@ -12,20 +12,28 @@
   align-items: center;
 }
 
+.footer-container {
+  display: block;
+}
+
 .footer {
   display: flex;
   flex: 1;
-  padding: 2rem 0;
+  padding: 2rem 10%;
+  padding-top: 14%;
+  padding-bottom: 3%;
   border-top: 1px solid #eaeaea;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  background-color: #09032F;
+  flex-direction: row;
+  max-height: 323px;
 }
 
 .footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
+  position: relative;
+  margin: 50px 10px;
+  color: rgba(255, 255, 255, 0.65);
 }
 
 .title a {
