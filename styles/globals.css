@@ -18,6 +18,15 @@ a {
   box-sizing: border-box;
 }
 
+ul {
+  padding-left: 1.5rem;
+  color: #5E5E5E;
+}
+
+p {
+  color: #5E5E5E;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
@@ -29,13 +38,19 @@ a {
 }
 
 .section {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  /* padding-top: 100px;
+  padding-bottom: 100px; */
   position: relative;
 }
 
 h1 {
   font-size: 72px;
+}
+
+h3 {
+  font-size: 48px;
+  font-family: "Space Grotesk";
+  font-weight: 800;
 }
 
 .container {
@@ -53,12 +68,122 @@ h1 {
   font-family: "Space Grotes", -apple-system, sans-serif;
 }
 
+.hero {
+  background-image:url("/hero_bg.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 60%;
+  padding-top: 100px;
+  /* padding-bottom: 100px; */
+}
+
+#hero-description {
+  background-color: #EFEFEF;
+  max-width: 100%;
+  margin-top: 7%;
+  margin-bottom: 0%;
+  padding: 5%;
+  text-align: center;
+}
+
+#hero-welcome {
+  background-color: #060606;
+  max-width: 100%;
+  /* margin-top: 7%; */
+  /* margin-bottom: 0%; */
+  padding: 5%;
+  text-align: center;
+  background-image:url("/welcome_bg.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.eco-description {
+  padding: 0px 32%;
+}
+
+.eco-logo-container {
+  margin-top: 20px;
+}
+
+.eco-logo {
+  margin: 0px 10px;
+}
+
+.welcome-title {
+  font-size: 44px;
+  font-family: "Space Grotesk", -apple-system, sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  color: white;
+}
+
+.welcome-content-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6%;
+  padding-top: 3%;
+}
+
+.welcome-content-container h4 {
+  color: white;
+  margin: 25px;
+}
+
+.welcome-content-container p {
+  color: #F9F9F9;
+  padding: 0 50px;
+  font-weight:500;
+}
+
+/* Job */
+#hero-job {
+  background-color: #EFEFEF;
+  padding: 5%;
+  padding-bottom: 12%;
+  text-align: left;
+}
+
+.job-title {
+  margin-bottom: 50px;
+}
+
+.job-content-container {
+  display : flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.job-list {
+  background-color: white;
+  padding: 20px;
+  width: 300px;
+}
+
+.job-img-container {
+  border-bottom: 0.94px solid rgba(0, 0, 0, 0.12);
+  margin-bottom: 20px;
+}
+
+.job-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  max-width: 140px;
+  max-height: 100px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
 /* Footer */
 
 
 .footer-container {
   position: relative;
-  margin-top: 10%;
+  /* margin-top: 10%; */
+  background-color: #EFEFEF;
 }
 
 footer {

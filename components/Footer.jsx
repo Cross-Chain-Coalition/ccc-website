@@ -10,21 +10,21 @@ const Footer = () => {
 
   return (
     <div className="footer-container">
-        <div class="v203_7341">
-            <div class="v203_7337"></div>
-                <div class="v203_7342">
+        <div className="v203_7341">
+            <div className="v203_7337"></div>
+                <div className="v203_7342">
                 </div>
-                <div class="v203_7343">
+                <div className="v203_7343">
                 </div>
-                <div class="contact-us_body">
+                <div className="contact-us_body">
                     <h5>
                         CONTACT US
                     </h5>
                     <h3>
-                        If you're interested in partnering 
+                        If you&quot;re interested in partnering 
                     </h3>
                     <a href="https://t.me/crosschaincoalition" target="_blank" rel="noopener noreferrer" className="btn btn-secondary btn-header">
-                    Let's Chat
+                    Let&quot;s Chat
                     </a> 
                 </div>
             </div>
