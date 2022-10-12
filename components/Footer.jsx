@@ -11,12 +11,12 @@ const Footer = () => {
   return (
     <div className="footer-container">
         <div class="v203_7341">
-            <div class="v203_7337"></div>
-                <div class="v203_7342">
+            <div className="v203_7337"></div>
+                <div className="v203_7342">
                 </div>
-                <div class="v203_7343">
+                <div className="v203_7343">
                 </div>
-                <div class="contact-us_body">
+                <div className="contact-us_body">
                     <h5>
                         CONTACT US
                     </h5>
