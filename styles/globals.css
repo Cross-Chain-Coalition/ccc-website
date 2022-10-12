@@ -29,8 +29,8 @@ a {
 }
 
 .section {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  /* padding-top: 100px;
+  padding-bottom: 100px; */
   position: relative;
 }
 
@@ -63,8 +63,8 @@ h3 {
   background-image:url("/hero_bg.svg");
   background-repeat: no-repeat;
   background-size: 100% 60%;
-  padding-top: 0px;
-  padding-bottom: 0px;
+  padding-top: 100px;
+  /* padding-bottom: 100px; */
 }
 
 #hero-description {
@@ -132,6 +132,7 @@ h3 {
 #hero-job {
   background-color: #EFEFEF;
   padding: 5%;
+  padding-bottom: 12%;
   text-align: left;
 }
 
@@ -172,7 +173,7 @@ h3 {
 
 .footer-container {
   position: relative;
-  margin-top: 10%;
+  /* margin-top: 10%; */
   background-color: #EFEFEF;
 }
 
