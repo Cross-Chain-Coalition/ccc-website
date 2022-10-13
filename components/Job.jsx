@@ -2,8 +2,8 @@ import React from 'react';
 import { Container, Row, Col, Button } from 'reactstrap';
 const Hero = () => {
   return (
-    <section id="hero-job" className="section position-relative">
-      <Container>
+    <section style={{"paddingBottom":"100px"}} id="hero-job" className="section position-relative">
+      <Container id="hero-container">
         <Row className="align-items-center">
           <div className="job-title">
             <h3>
@@ -29,7 +29,7 @@ const Hero = () => {
                 The fastest messenger chain
                 </li>
               </ul>
-              <a href="https://t.me/crosschaincoalition" target="_blank" rel="noopener noreferrer" className="btn btn-secondary btn-header">
+              <a href="https://ccc.pallet.com/jobs" target="_blank" rel="noopener noreferrer" className="btn btn-secondary btn-header">
                 View profile
               </a>
             </div>
@@ -48,7 +48,7 @@ const Hero = () => {
                 Seamlessly connecting blockchains
                 </li>
               </ul>
-              <a href="https://t.me/crosschaincoalition" target="_blank" rel="noopener noreferrer" className="btn btn-secondary btn-header">
+              <a href="https://ccc.pallet.com/jobs" target="_blank" rel="noopener noreferrer" className="btn btn-secondary btn-header">
                 View profile
               </a>
             </div>
@@ -67,10 +67,15 @@ const Hero = () => {
                 Secure cross-chain communication
                 </li>
               </ul>
-              <a href="https://t.me/crosschaincoalition" target="_blank" rel="noopener noreferrer" className="btn btn-secondary btn-header">
+              <a href="https://ccc.pallet.com/jobs" target="_blank" rel="noopener noreferrer" className="btn btn-secondary btn-header">
                 View profile
               </a>
             </div>
+          </div>
+          <div style={{"marginTop":"40px", "justifyContent": "center"}}>
+            <a href="https://ccc.pallet.com/jobs" target="_blank" rel="noopener noreferrer" className="btn btn-hero">
+              See all opportunities
+            </a>
           </div>
 
         </Row>

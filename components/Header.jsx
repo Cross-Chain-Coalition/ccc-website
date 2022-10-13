@@ -40,16 +40,16 @@ const Header = () => {
             </NavbarBrand>
             <Nav className="m-auto" navbar>
               <NavItem>
-                <NavLink href="/">About us</NavLink>
+                <NavLink href="#welcome">About us</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#feature">Community</NavLink>
+                <NavLink href="#community">Community</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#service">Media</NavLink>
+                <NavLink href="#newsletter">Newsletter</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#about">Contact Us</NavLink>
+                <NavLink href="#contact">Contact Us</NavLink>
               </NavItem>
             </Nav>
             <a href="https://t.me/crosschaincoalition" target="_blank" rel="noopener noreferrer" className="btn btn-secondary btn-header">

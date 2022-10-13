@@ -53,8 +53,18 @@ h3 {
   font-weight: 800;
 }
 
+h5 {
+  font-size: 22px;
+  font-family: "Space Grotesk";
+}
+
 .container {
   max-width: 80%;
+}
+
+.flex-space-between {
+  display: flex;
+  justify-content: space-between;
 }
 
 /* Hero section */
@@ -76,6 +86,14 @@ h3 {
   /* padding-bottom: 100px; */
 }
 
+.hero-title {
+  font-family: "Space Grotesk", -apple-system, sans-serif;
+  font-size: 72px;
+  font-weight: 800;
+  line-height: 74px;
+  letter-spacing: -0.05em;
+}
+
 #hero-description {
   background-color: #EFEFEF;
   max-width: 100%;
@@ -85,11 +103,9 @@ h3 {
   text-align: center;
 }
 
-#hero-welcome {
+#welcome {
   background-color: #060606;
   max-width: 100%;
-  /* margin-top: 7%; */
-  /* margin-bottom: 0%; */
   padding: 5%;
   text-align: center;
   background-image:url("/welcome_bg.svg");
@@ -101,9 +117,34 @@ h3 {
   padding: 0px 32%;
 }
 
-.eco-logo-container {
+#eco-logo-container {
   margin-top: 20px;
+  height:50px; 
+  position:relative; 
+  overflow:hidden;
 }
+
+.eco-logo-list {
+  position:absolute; 
+  top:0px; 
+  left:0px; 
+  overflow:hidden; 
+  white-space: nowrap;
+  animation: bannermove 30s linear infinite;
+}
+
+@keyframes bannermove {
+  0% {
+      transform: translate(0, 0);
+  }
+  100% {
+      transform: translate(-50%, 0);
+  }
+}
+
+/* .eco-logo-list img {
+  margin: 0 0.5em 
+} */
 
 .eco-logo {
   margin: 0px 10px;
@@ -137,12 +178,109 @@ h3 {
   font-weight:500;
 }
 
+/* Newsletter */
+#newsletter-container {
+  background-color: #060606;
+  max-width: 100%;
+  padding: 12.5%;
+  padding-top: 5%;
+  text-align: center;
+  background-image:url("/welcome_bg.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.newsletter-title-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.newsletter-container-right {
+  display: flex;
+  flex-direction: row;
+}
+
+.newsletter-title {
+  font-size: 44px;
+  font-family: "Space Grotesk", -apple-system, sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  color: white;
+}
+
+.newsletter-description {
+  font-size: 20px;
+  font-family: "Space Grotesk", -apple-system, sans-serif;
+  color: white;
+}
+
+.subscribe-btn {
+  margin-left: 30px;
+}
+
+.newsletter-content-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  /* padding: 6%; */
+  padding-top: 3%;
+}
+
+.newsletter-content {
+  background-color: white;
+  color: #09032F;
+  text-align: left;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  object-fit: cover;
+  margin: 0 10px;
+  font-family: "Space Grotesk", -apple-system, sans-serif;
+}
+
+.newsletter-content img {
+  max-width:100%;
+  max-height:100%;
+}
+
+.newsletter-content p {
+  font-size: 16px;
+  font-weight: 700;
+  padding: 10px;
+}
+
+.newsletter-content span {
+  font-size: 12px;
+  color: #5E5E5E;
+}
+
+.newsletter-content a {
+  border-radius: 24px;
+  background-color: none;
+  border: 1px solid #09032F;
+  font-size: 12px;
+  padding: 0 10px;
+}
+
+.newsletter-content-details {
+  padding: 10px;
+}
+
 /* Job */
 #hero-job {
   background-color: #EFEFEF;
-  padding: 5%;
-  padding-bottom: 12%;
+  /* padding: 5%; */
+  /* padding-bottom: 12%; */
   text-align: left;
+}
+
+#hero-container {
+  max-width: 100%;
+  padding: 12.5%;
+  padding-bottom: 5%;
+  padding-top: 5%;
 }
 
 .job-title {

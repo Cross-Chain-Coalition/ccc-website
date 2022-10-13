@@ -7,9 +7,11 @@ const Hero = () => {
         <Row className="align-items-center">
           <Col lg={6}>
             <div className="pr-lg-5">
-                <div className="mt-5 mt-lg-0">
-                <img src="/hero-title.svg" alt="" className="img-fluid d-block"/>
-                </div>
+              <div className="mt-5 mt-lg-0">
+              <h1 className="hero-title">
+                The <span style={{"color": "#5858FF"}}>Cross Chain</span> Coalition
+              </h1>
+              </div>
               <p className="text-muted mb-4 pb-2">Focused on scaling cross chain infrastructure through events & education</p>
               <a href="https://t.me/crosschaincoalition" target="_blank" rel="noopener noreferrer" className="btn btn-hero">
                 Join Us
@@ -28,36 +30,62 @@ const Hero = () => {
           <p className="eco-description">
             Ecosystems and Partners Who Help Support the Cross Chain Coalition Community of <span style={{"color": "#5151FF", "fontWeight": "700"}}>6000+</span> Developers
           </p>
-          <div className="eco-logo-container">
-            <a href="https://cosmos.network/" target="_blank" rel="noopener noreferrer" className="eco-logo">
-              <img src="/icon_cosmos.png" alt="Cosmos logo" />
-            </a>
-            <a href="https://polygon.technology/" target="_blank" rel="noopener noreferrer" className="eco-logo">
-              <img src="/icon_polygon.png" alt="Polygon logo" />
-            </a>
-            <a href="https://solana.com/" target="_blank" rel="noopener noreferrer" className="eco-logo">
-              <img src="/icon_solana.png" alt="Solana logo" />
-            </a>
-            <a href="https://ethereum.org/en/" target="_blank" rel="noopener noreferrer" className="eco-logo">
-              <img src="/icon_eth.png" alt="Ethereum logo" />
-            </a>
-            <a href="https://www.palomachain.com/" target="_blank" rel="noopener noreferrer" className="eco-logo">
-              <img src="/icon_paloma.png" alt="Palomachain logo" />
-            </a>
-            <a href="https://curve.fi/" target="_blank" rel="noopener noreferrer" className="eco-logo">
-              <img src="/icon_curve.png" alt="Curve finance logo" />
-            </a>
-            <a href="https://layerzero.network/" target="_blank" rel="noopener noreferrer" className="eco-logo">
-              <img src="/icon_layer.png" alt="Layer zero logo" />
-            </a>
-            <a href="https://volume.finance//" target="_blank" rel="noopener noreferrer" className="eco-logo">
-              <img src="/icon_volume.png" alt="Volume finance logo" />
-            </a>
+          <div id="eco-logo-container">
+            <div className="eco-logo-list">
+              <a href="https://cosmos.network/" target="_blank" rel="noopener noreferrer" className="eco-logo first">
+                <img src="/icon_cosmos.svg" alt="Cosmos logo" />
+              </a>
+              <a href="https://polygon.technology/" target="_blank" rel="noopener noreferrer" className="eco-logo">
+                <img src="/icon_polygon.svg" alt="Polygon logo" />
+              </a>
+              <a href="https://solana.com/" target="_blank" rel="noopener noreferrer" className="eco-logo">
+                <img src="/icon_solana.svg" alt="Solana logo" />
+              </a>
+              <a href="https://ethereum.org/en/" target="_blank" rel="noopener noreferrer" className="eco-logo">
+                <img src="/icon_eth.svg" alt="Ethereum logo" />
+              </a>
+              <a href="https://www.palomachain.com/" target="_blank" rel="noopener noreferrer" className="eco-logo">
+                <img src="/icon_paloma.svg" alt="Palomachain logo" />
+              </a>
+              <a href="https://curve.fi/" target="_blank" rel="noopener noreferrer" className="eco-logo">
+                <img src="/icon_curve.svg" alt="Curve finance logo" />
+              </a>
+              <a href="https://layerzero.network/" target="_blank" rel="noopener noreferrer" className="eco-logo">
+                <img src="/icon_layer.svg" alt="Layer zero logo" />
+              </a>
+              <a href="https://volume.finance//" target="_blank" rel="noopener noreferrer" className="eco-logo">
+                <img src="/icon_volume.svg" alt="Volume finance logo" />
+              </a>
+              <a href="https://cosmos.network/" target="_blank" rel="noopener noreferrer" className="eco-logo first">
+                <img src="/icon_cosmos.svg" alt="Cosmos logo" />
+              </a>
+              <a href="https://polygon.technology/" target="_blank" rel="noopener noreferrer" className="eco-logo">
+                <img src="/icon_polygon.svg" alt="Polygon logo" />
+              </a>
+              <a href="https://solana.com/" target="_blank" rel="noopener noreferrer" className="eco-logo">
+                <img src="/icon_solana.svg" alt="Solana logo" />
+              </a>
+              <a href="https://ethereum.org/en/" target="_blank" rel="noopener noreferrer" className="eco-logo">
+                <img src="/icon_eth.svg" alt="Ethereum logo" />
+              </a>
+              <a href="https://www.palomachain.com/" target="_blank" rel="noopener noreferrer" className="eco-logo">
+                <img src="/icon_paloma.svg" alt="Palomachain logo" />
+              </a>
+              <a href="https://curve.fi/" target="_blank" rel="noopener noreferrer" className="eco-logo">
+                <img src="/icon_curve.svg" alt="Curve finance logo" />
+              </a>
+              <a href="https://layerzero.network/" target="_blank" rel="noopener noreferrer" className="eco-logo">
+                <img src="/icon_layer.svg" alt="Layer zero logo" />
+              </a>
+              <a href="https://volume.finance//" target="_blank" rel="noopener noreferrer" className="eco-logo">
+                <img src="/icon_volume.svg" alt="Volume finance logo" />
+              </a>
+            </div>
           </div>
 
         </Row>
       </Container>
-      <Container id="hero-welcome">
+      <Container id="welcome">
         <Row className="align-items-center">
           <h3 className="welcome-title">
             Welcome to The CCC

@@ -21,10 +21,10 @@ const Footer = () => {
                         CONTACT US
                     </h5>
                     <h3>
-                        If you&quot;re interested in partnering 
+                        If you’re interested in partnering 
                     </h3>
-                    <a href="https://t.me/crosschaincoalition" target="_blank" rel="noopener noreferrer" className="btn btn-secondary btn-header">
-                    Let&quot;s Chat
+                    <a href="https://t.me/amartin55" target="_blank" rel="noopener noreferrer" className="btn btn-secondary btn-header">
+                    Let’s Chat
                     </a> 
                 </div>
             </div>

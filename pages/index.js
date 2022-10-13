@@ -8,6 +8,8 @@ import Layout from "../components/Layout";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Footer from "../components/Footer";
+import Newsletter from "../components/Newsletter";
+// import NewsletterCTA from "../components/NewsletterCTA";
 import Job from "../components/Job";
 
 export default function Home() {
@@ -21,7 +23,9 @@ export default function Home() {
 
       <Header />
       <Hero />
+      <Newsletter />
       <Job />
+      {/* <NewsletterCTA /> */}
       <Footer/>
     </Layout>
   )
