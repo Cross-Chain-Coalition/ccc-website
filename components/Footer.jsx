@@ -40,7 +40,7 @@ const Footer = () => {
                     Events
                 </a>
                 <a href="/" target="_blank" rel="noopener noreferrer" className="footer-menu">
-                    Media
+                    Newsletter
                 </a>
                 <a href="https://ccc.pallet.com/jobs" target="_blank" rel="noopener noreferrer" className="footer-menu">
                     Jobs
