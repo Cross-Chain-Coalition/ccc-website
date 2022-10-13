@@ -72,7 +72,7 @@ const Hero = () => {
               </a>
             </div>
           </div>
-          <div style={{"marginTop":"40px", "justifyContent": "center"}}>
+          <div style={{"marginTop":"40px", "justifyContent": "center", "textAlign": "center"}}>
             <a href="https://ccc.pallet.com/jobs" target="_blank" rel="noopener noreferrer" className="btn btn-hero">
               See all opportunities
             </a>
