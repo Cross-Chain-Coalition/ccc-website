@@ -4,7 +4,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "League Spartan", -apple-system, sans-serif;
+  font-family: League Spartan, -apple-system, sans-serif;
   color: #09032F;
   background-color: #EFEFEF;
 }
@@ -49,13 +49,13 @@ h1 {
 
 h3 {
   font-size: 48px;
-  font-family: "Space Grotesk";
+  font-family: Space Grotesk,  -apple-system, sans-serif;
   font-weight: 800;
 }
 
 h5 {
   font-size: 22px;
-  font-family: "Space Grotesk";
+  font-family: Space Grotesk,  -apple-system, sans-serif;
 }
 
 .container {
@@ -75,7 +75,7 @@ h5 {
   padding: 10px 40px;
   background: #5252FF;
   color: white;
-  font-family: "Space Grotes", -apple-system, sans-serif;
+  font-family: Space Grotesk,  -apple-system, sans-serif, -apple-system, sans-serif;
 }
 
 .btn-hero:hover {
@@ -93,7 +93,7 @@ h5 {
 }
 
 .hero-title {
-  font-family: "Space Grotesk", -apple-system, sans-serif;
+  font-family: Space Grotesk,  -apple-system, sans-serif, -apple-system, sans-serif;
   font-size: 72px;
   font-weight: 800;
   line-height: 74px;
@@ -110,10 +110,10 @@ h5 {
 }
 
 #welcome {
-  background-color: #060606;
   max-width: 100%;
   padding: 5%;
   text-align: center;
+  background-color: #0C1C21;
   background-image:url("/welcome_bg.svg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -148,17 +148,13 @@ h5 {
   }
 }
 
-/* .eco-logo-list img {
-  margin: 0 0.5em 
-} */
-
 .eco-logo {
   margin: 0px 10px;
 }
 
 .welcome-title {
   font-size: 44px;
-  font-family: "Space Grotesk", -apple-system, sans-serif;
+  font-family: Space Grotesk,  -apple-system, sans-serif, -apple-system, sans-serif;
   font-weight: 800;
   letter-spacing: -0.05em;
   color: white;
@@ -186,12 +182,22 @@ h5 {
 
 /* Newsletter */
 #newsletter-container {
-  background-color: #060606;
+  background-color: #0C1C21;
+  background-image:url("/welcome_bg.svg");
   max-width: 100%;
   padding: 12.5%;
   padding-top: 5%;
   text-align: center;
-  background-image:url("/welcome_bg.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+#newsletter-cta-container {
+  background-color: #0C1C21;
+  max-width: 100%;
+  padding: 12.5%;
+  padding-top: 5%;
+  text-align: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
@@ -209,7 +215,7 @@ h5 {
 
 .newsletter-title {
   font-size: 44px;
-  font-family: "Space Grotesk", -apple-system, sans-serif;
+  font-family: Space Grotesk,  -apple-system, sans-serif, -apple-system, sans-serif;
   font-weight: 800;
   letter-spacing: -0.05em;
   color: white;
@@ -217,7 +223,7 @@ h5 {
 
 .newsletter-description {
   font-size: 20px;
-  font-family: "Space Grotesk", -apple-system, sans-serif;
+  font-family: Space Grotesk,  -apple-system, sans-serif, -apple-system, sans-serif;
   color: white;
 }
 
@@ -243,7 +249,7 @@ h5 {
   overflow: hidden;
   object-fit: cover;
   margin: 0 10px;
-  font-family: "Space Grotesk", -apple-system, sans-serif;
+  font-family: Space Grotesk,  -apple-system, sans-serif, -apple-system, sans-serif;
 }
 
 .newsletter-content img {
@@ -274,11 +280,119 @@ h5 {
   padding: 10px;
 }
 
+.newsletter-form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.subscribe-form-container {
+  width: 100%;
+  max-width: 660px;
+  min-height: 660px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background: url(/newsletter.svg);
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.subscribe-form-container .join {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+  text-transform: uppercase;
+  color: white;
+  font-family: Space Grotesk, -apple-system, sans-serif;
+}
+
+.subscribe-form-container .cc {
+  font-weight: 400;
+  font-size: 53px;
+  color: white;
+  font-family: Russo One, -apple-system, sans-serif;
+}
+
+.subscribe-form-container .weekly {
+  font-weight: 400;
+  font-size: 44.722px;
+  color: #5252ff;
+  font-family: Russo One, -apple-system, sans-serif;
+}
+
+.subscribe-form-container .content {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  max-width: 524px;
+  text-align: center;
+  margin-top: 20px;
+  color: white;
+  font-family: Space Grotesk, -apple-system, sans-serif;
+}
+
+.subscribe-form-container .email-form {
+  width: 100%;
+  max-width: 568px;
+  font-family: Space Grotesk, -apple-system, sans-serif;
+}
+
+.subscribe-form-container .email-box {
+  background: #0f0f0f;
+  border: 1px solid #fff;
+  border-radius: 30px;
+  width: 100%;
+  max-width: 568px;
+  height: 63px;
+  display: flex;
+  margin-top: 20px;
+}
+
+.subscribe-form-container .email-box-input {
+  height: 100%;
+  flex: 1 1;
+  border: none;
+  outline: none;
+  background: #0C1C21;
+  color: white;
+  font-weight: 400;
+  font-size: 16px;
+  padding-left: 30px;
+  border-radius: 30px 0 0 30px;
+}
+
+.subscribe-form-container .email-box-input::placeholder {
+  color: white;
+}
+
+.subscribe-form-container .email-box .submit {
+  padding: 0 45px;
+  height: 100%;
+  cursor: pointer;
+  background: #fff;
+  color: #000000;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 16px;
+}
+
+.subscribe-form-container .email-box .submit:hover {
+  background-color: #5c636a;
+  border-color: #5c636a;
+  color: white;
+}
+
 /* Job */
 #hero-job {
   background-color: #EFEFEF;
-  /* padding: 5%; */
-  /* padding-bottom: 12%; */
   text-align: left;
 }
 
@@ -326,8 +440,6 @@ h5 {
 
 .footer-container {
   position: relative;
-  /* margin-top: 10%; */
-  background-color: #EFEFEF;
 }
 
 footer {
@@ -403,6 +515,6 @@ footer {
 }
 .contact-us_body h3 {
   font-size: 48px;
-  font-family: "Space Grotesk";
+  font-family: Space Grotesk,  -apple-system, sans-serif;
   font-weight: 800;
 }
