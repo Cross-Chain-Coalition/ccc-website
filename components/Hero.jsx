@@ -1,5 +1,111 @@
 import React from 'react';
 import { Container, Row, Col, Button } from 'reactstrap';
+import { TELEGRAM_LINK } from '../utils/constants'
+
+const partnersLogo = [
+  {
+    link: "https://cosmos.network/",
+    logo: "/icon_cosmos.svg",
+    alt: "Cosmos logo"
+  },
+  {
+    link: "https://polygon.technology/",
+    logo: "/icon_polygon.svg",
+    alt: "Polygon logo"
+  },
+  {
+    link: "https://solana.com",
+    logo: "/icon_solana.svg",
+    alt: "Solana logo"
+  },
+  {
+    link: "https://ethereum.org/en/",
+    logo: "/icon_eth.svg",
+    alt: "Ethereum logo"
+  },
+  {
+    link: "https://www.palomachain.com/",
+    logo: "/icon_paloma.svg",
+    alt: "Paloma logo"
+  },
+  {
+    link: "https://curve.fi/",
+    logo: "/icon_curve.svg",
+    alt: "Curve finance logo"
+  },
+  {
+    link: "https://layerzero.network/",
+    logo: "/icon_layer.svg",
+    alt: "Layer zero logo"
+  },
+  {
+    link: "https://volume.finance/",
+    logo: "/icon_volume.svg",
+    alt: "Volume finance logo"
+  },
+  {
+    link: "https://cosmos.network/",
+    logo: "/icon_cosmos.svg",
+    alt: "Cosmos logo"
+  },
+  {
+    link: "https://polygon.technology/",
+    logo: "/icon_polygon.svg",
+    alt: "Polygon logo"
+  },
+  {
+    link: "https://solana.com",
+    logo: "/icon_solana.svg",
+    alt: "Solana logo"
+  },
+  {
+    link: "https://ethereum.org/en/",
+    logo: "/icon_eth.svg",
+    alt: "Ethereum logo"
+  },
+  {
+    link: "https://www.palomachain.com/",
+    logo: "/icon_paloma.svg",
+    alt: "Paloma logo"
+  },
+  {
+    link: "https://curve.fi/",
+    logo: "/icon_curve.svg",
+    alt: "Curve finance logo"
+  },
+  {
+    link: "https://layerzero.network/",
+    logo: "/icon_layer.svg",
+    alt: "Layer zero logo"
+  },
+  {
+    link: "https://volume.finance/",
+    logo: "/icon_volume.svg",
+    alt: "Volume finance logo"
+  }
+]
+
+const heroWelcome = [
+  {
+    img: "/world-class-event.png",
+    alt: "World class event",
+    title: "World Class Events",
+    description: "access to the most prominent builders and investors in the space"
+  },
+  {
+    img: "/industry-alpha.png",
+    alt: "Industry aplha",
+    title: "Industry Aplha",
+    description: "News and insights on the space to make sure you never miss a beat"
+  },
+  {
+    img: "/authentic-connection.png",
+    alt: "Authentic connection",
+    title: "Authentic Connection",
+    description: "a community of ambitious people solving the hardest problems in cross chain"
+  },
+]
+
 const Hero = () => {
   return (
     <section className="hero position-relative">
@@ -13,7 +119,7 @@ const Hero = () => {
               </h1>
               </div>
               <p className="text-muted mb-4 pb-2">Focused on scaling cross chain infrastructure through events & education</p>
-              <a href="https://t.me/crosschaincoalition" target="_blank" rel="noopener noreferrer" className="btn btn-hero">
+              <a href={TELEGRAM_LINK} target="_blank" rel="noopener noreferrer" className="btn btn-hero">
                 Join Us
               </a>
             </div>
@@ -32,54 +138,11 @@ const Hero = () => {
           </p>
           <div id="eco-logo-container">
             <div className="eco-logo-list">
-              <a href="https://cosmos.network/" target="_blank" rel="noopener noreferrer" className="eco-logo first">
-                <img src="/icon_cosmos.svg" alt="Cosmos logo" />
+            {partnersLogo.map((item, index) => (
+              <a key={index} href={item.link} target="_blank" rel="noopener noreferrer" className="eco-logo first">
+                <img src={item.logo} alt={item.alt} />
               </a>
-              <a href="https://polygon.technology/" target="_blank" rel="noopener noreferrer" className="eco-logo">
-                <img src="/icon_polygon.svg" alt="Polygon logo" />
-              </a>
-              <a href="https://solana.com/" target="_blank" rel="noopener noreferrer" className="eco-logo">
-                <img src="/icon_solana.svg" alt="Solana logo" />
-              </a>
-              <a href="https://ethereum.org/en/" target="_blank" rel="noopener noreferrer" className="eco-logo">
-                <img src="/icon_eth.svg" alt="Ethereum logo" />
-              </a>
-              <a href="https://www.palomachain.com/" target="_blank" rel="noopener noreferrer" className="eco-logo">
-                <img src="/icon_paloma.svg" alt="Palomachain logo" />
-              </a>
-              <a href="https://curve.fi/" target="_blank" rel="noopener noreferrer" className="eco-logo">
-                <img src="/icon_curve.svg" alt="Curve finance logo" />
-              </a>
-              <a href="https://layerzero.network/" target="_blank" rel="noopener noreferrer" className="eco-logo">
-                <img src="/icon_layer.svg" alt="Layer zero logo" />
-              </a>
-              <a href="https://volume.finance//" target="_blank" rel="noopener noreferrer" className="eco-logo">
-                <img src="/icon_volume.svg" alt="Volume finance logo" />
-              </a>
-              <a href="https://cosmos.network/" target="_blank" rel="noopener noreferrer" className="eco-logo first">
-                <img src="/icon_cosmos.svg" alt="Cosmos logo" />
-              </a>
-              <a href="https://polygon.technology/" target="_blank" rel="noopener noreferrer" className="eco-logo">
-                <img src="/icon_polygon.svg" alt="Polygon logo" />
-              </a>
-              <a href="https://solana.com/" target="_blank" rel="noopener noreferrer" className="eco-logo">
-                <img src="/icon_solana.svg" alt="Solana logo" />
-              </a>
-              <a href="https://ethereum.org/en/" target="_blank" rel="noopener noreferrer" className="eco-logo">
-                <img src="/icon_eth.svg" alt="Ethereum logo" />
-              </a>
-              <a href="https://www.palomachain.com/" target="_blank" rel="noopener noreferrer" className="eco-logo">
-                <img src="/icon_paloma.svg" alt="Palomachain logo" />
-              </a>
-              <a href="https://curve.fi/" target="_blank" rel="noopener noreferrer" className="eco-logo">
-                <img src="/icon_curve.svg" alt="Curve finance logo" />
-              </a>
-              <a href="https://layerzero.network/" target="_blank" rel="noopener noreferrer" className="eco-logo">
-                <img src="/icon_layer.svg" alt="Layer zero logo" />
-              </a>
-              <a href="https://volume.finance//" target="_blank" rel="noopener noreferrer" className="eco-logo">
-                <img src="/icon_volume.svg" alt="Volume finance logo" />
-              </a>
+            ))}
             </div>
           </div>
 
@@ -91,33 +154,13 @@ const Hero = () => {
             Welcome to The CCC
           </h3>
           <div className="welcome-content-container">
-            <div className="welcome-image">
-              <img src="/world-class-event.png" alt="World class event" />
-              <h4>
-                World Class Events
-              </h4>
-              <p>
-                access to the most prominent builders and investors in the space
-              </p>
-            </div>
-            <div className="welcome-image">
-              <img src="/industry-alpha.png" alt="Industry aplha" />
-              <h4>
-                Industry Alpha
-              </h4>
-              <p>
-                News and insights on the space to make sure you never miss a beat
-              </p>
-            </div>
-            <div className="welcome-image">
-              <img src="/authentic-connection.png" alt="Authentic connection" />
-              <h4>
-                Authentic Connection
-              </h4>
-              <p>
-                a community of ambitious people solving the hardest problems in cross chain
-              </p>
-            </div>
+            {heroWelcome.map((item, index) => (
+               <div key={index} className="welcome-image">
+                <img src={item.img} alt={item.alt} />
+                <h4>{item.title}</h4>
+                <p>{item.description}</p>
+               </div>
+            ))}
           </div>
 
         </Row>

@@ -10,7 +10,8 @@ import {
   NavLink,
   Button
 } from 'reactstrap';
-import Image from 'next/image'
+import Image from 'next/image';
+import { TELEGRAM_LINK } from '../utils/constants' ;
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -52,7 +53,7 @@ const Header = () => {
                 <NavLink href="#contact">Contact Us</NavLink>
               </NavItem>
             </Nav>
-            <a href="https://t.me/crosschaincoalition" target="_blank" rel="noopener noreferrer" className="btn btn-secondary btn-header">
+            <a href={TELEGRAM_LINK} target="_blank" rel="noopener noreferrer" className="btn btn-secondary btn-header">
               Join Us
             </a>
           </Collapse>

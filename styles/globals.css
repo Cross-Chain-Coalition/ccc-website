@@ -78,6 +78,12 @@ h5 {
   font-family: "Space Grotes", -apple-system, sans-serif;
 }
 
+.btn-hero:hover {
+  background-color: #5c636a;
+  border-color: #5c636a;
+  color: white;
+}
+
 .hero {
   background-image:url("/hero_bg.svg");
   background-repeat: no-repeat;
