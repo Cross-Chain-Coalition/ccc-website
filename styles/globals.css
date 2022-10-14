@@ -89,7 +89,6 @@ h5 {
   background-repeat: no-repeat;
   background-size: 100% 60%;
   padding-top: 100px;
-  /* padding-bottom: 100px; */
 }
 
 .hero-title {
@@ -180,6 +179,43 @@ h5 {
   font-weight:500;
 }
 
+/* Community */
+#community {
+  background: #FAFAFA;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.community-flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.community-items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+
+.community-logo {
+  margin: 5px 10px;
+}
+
+.community-logo:hover {
+  border: 0.2px solid #5252FF;
+  border-radius: 5px;
+}
+
+.community-title {
+  margin-bottom: 50px;
+}
+
+.community-title p {
+  max-width: 675px;
+  font-size: 18px;
+}
+
 /* Newsletter */
 #newsletter-container {
   background-color: #0C1C21;
@@ -236,7 +272,6 @@ h5 {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  /* padding: 6%; */
   padding-top: 3%;
 }
 

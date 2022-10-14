@@ -7,10 +7,11 @@ import styles from '../styles/Home.module.css'
 import Layout from "../components/Layout";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
-import Footer from "../components/Footer";
+import Community from "../components/Community";
 import Newsletter from "../components/Newsletter";
-import NewsletterCTA from "../components/NewsletterCTA";
 import Job from "../components/Job";
+import NewsletterCTA from "../components/NewsletterCTA";
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
@@ -23,10 +24,11 @@ export default function Home() {
 
       <Header />
       <Hero />
+      <Community />
       <Newsletter />
       <Job />
       <NewsletterCTA />
-      <Footer/>
+      <Footer />
     </Layout>
   )
 }

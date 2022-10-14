@@ -10,7 +10,7 @@ import { TELEGRAM_LINK, TWITTER_LINK, SUBSTACK_LINK, CONTACT_PIC_LINK, JOBS_LINK
 const Footer = () => {
 
   return (
-    <div className="footer-container">
+    <div id="contact" className="footer-container">
         <div className="v203_7341">
             <div className="v203_7337"></div>
                 <div className="v203_7342">
