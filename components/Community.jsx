@@ -44,9 +44,9 @@ const communityLogo = [
         alt: "Layer zero logo"
     },
     {
-        link: "#",
+        link: "https://panteracapital.com/",
         logo: "/1-section.svg",
-        alt: "Ethereum logo"
+        alt: "Pantera logo"
     },
     {
         link: "https://curve.fi/",
@@ -54,14 +54,14 @@ const communityLogo = [
         alt: "Curve finance logo"
     },
     {
-        link: "#",
+        link: "https://jumpcrypto.com/",
         logo: "/2-section.svg",
-        alt: "Ethereum logo"
+        alt: "Jump logo"
     },
     {
-        link: "#",
+        link: "https://wormhole.com/",
         logo: "/3-section.svg",
-        alt: "Ethereum logo"
+        alt: "Wormhole logo"
     },
     {
         link: "https://pyth.network/",
@@ -108,7 +108,7 @@ const Hero = () => {
           <Col lg={6}>
             <div className="community-items">
                 {communityLogo.map((item, index) => (
-                <a key={index} href={item.link}>
+                <a key={index} href={item.link} target="_blank" rel="noopener noreferrer">
                     <img src={item.logo} alt={item.alt} className="img-fluid community-logo d-block"/>
                 </a>
                 ))}
