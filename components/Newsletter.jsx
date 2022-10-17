@@ -1,6 +1,8 @@
 import React from 'react';
-import { Container, Row, Col, Button } from 'reactstrap';
-const Hero = () => {
+import { Container, Row } from 'reactstrap';
+import { fetchNewsletter } from '../pages/api/axios';
+import NewsletterItem from './NewsletterItem';
+const Newsletter = ({ newsletter }) => {
   return (
     <section id="newsletter" className="position-relative">
       <Container id="newsletter-container">
@@ -21,7 +23,14 @@ const Hero = () => {
                 </div>
             </div>
           <div className="newsletter-content-container">
-            <div className="newsletter-content">
+            {/* We use 4 component for now to mimic all 4 newsletter post */}
+            {
+                newsletter.map(post => {
+                return <NewsletterItem key={post.id} post={post} />
+                })
+              }
+            {/* <NewsletterItem /> */}
+            {/* <div className="newsletter-content">
               <img src="/newsletter-img.png" alt="World class event" />
               <p>
                 The Cross Chain Coalition teams up with TechCrunch, another $100m+ hack, the merge post-mortem, & IBC is taking over the world
@@ -76,7 +85,7 @@ const Hero = () => {
                         Read More
                     </a>
                 </div>
-            </div>
+            </div> */}
           </div>
 
         </Row>
@@ -84,4 +93,16 @@ const Hero = () => {
     </section>
   );
 }
-export default Hero;
+export default Newsletter;
+
+export const getStaticProps = async () => {
+  // const all_posts = await fetchAllNewsletters();
+  const newsletter = await fetchNewsletter();
+  // const events = await fetchEvents();
+
+  return {
+    props: {
+      newsletter,
+    }
+  }
+}
