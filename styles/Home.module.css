@@ -25,7 +25,8 @@
   border-top: 1px solid #eaeaea;
   justify-content: space-between;
   align-items: center;
-  background-color: #09032F;
+  background-color: #0C1C21;
+  background-image:url("/welcome_bg.svg");
   flex-direction: row;
   max-height: 323px;
 }

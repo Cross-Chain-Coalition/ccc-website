@@ -4,7 +4,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "League Spartan", -apple-system, sans-serif;
+  font-family: League Spartan, -apple-system, sans-serif;
   color: #09032F;
   background-color: #EFEFEF;
 }
@@ -49,12 +49,22 @@ h1 {
 
 h3 {
   font-size: 48px;
-  font-family: "Space Grotesk";
+  font-family: Space Grotesk,  -apple-system, sans-serif;
   font-weight: 800;
+}
+
+h5 {
+  font-size: 22px;
+  font-family: Space Grotesk,  -apple-system, sans-serif;
 }
 
 .container {
   max-width: 80%;
+}
+
+.flex-space-between {
+  display: flex;
+  justify-content: space-between;
 }
 
 /* Hero section */
@@ -65,7 +75,13 @@ h3 {
   padding: 10px 40px;
   background: #5252FF;
   color: white;
-  font-family: "Space Grotes", -apple-system, sans-serif;
+  font-family: Space Grotesk,  -apple-system, sans-serif, -apple-system, sans-serif;
+}
+
+.btn-hero:hover {
+  background-color: #5c636a;
+  border-color: #5c636a;
+  color: white;
 }
 
 .hero {
@@ -73,7 +89,14 @@ h3 {
   background-repeat: no-repeat;
   background-size: 100% 60%;
   padding-top: 100px;
-  /* padding-bottom: 100px; */
+}
+
+.hero-title {
+  font-family: Space Grotesk,  -apple-system, sans-serif, -apple-system, sans-serif;
+  font-size: 72px;
+  font-weight: 800;
+  line-height: 74px;
+  letter-spacing: -0.05em;
 }
 
 #hero-description {
@@ -85,13 +108,11 @@ h3 {
   text-align: center;
 }
 
-#hero-welcome {
-  background-color: #060606;
+#welcome {
   max-width: 100%;
-  /* margin-top: 7%; */
-  /* margin-bottom: 0%; */
   padding: 5%;
   text-align: center;
+  background-color: #0C1C21;
   background-image:url("/welcome_bg.svg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -101,8 +122,29 @@ h3 {
   padding: 0px 32%;
 }
 
-.eco-logo-container {
+#eco-logo-container {
   margin-top: 20px;
+  height:50px; 
+  position:relative; 
+  overflow:hidden;
+}
+
+.eco-logo-list {
+  position:absolute; 
+  top:0px; 
+  left:0px; 
+  overflow:hidden; 
+  white-space: nowrap;
+  animation: bannermove 30s linear infinite;
+}
+
+@keyframes bannermove {
+  0% {
+      transform: translate(0, 0);
+  }
+  100% {
+      transform: translate(-50%, 0);
+  }
 }
 
 .eco-logo {
@@ -111,7 +153,7 @@ h3 {
 
 .welcome-title {
   font-size: 44px;
-  font-family: "Space Grotesk", -apple-system, sans-serif;
+  font-family: Space Grotesk,  -apple-system, sans-serif, -apple-system, sans-serif;
   font-weight: 800;
   letter-spacing: -0.05em;
   color: white;
@@ -137,12 +179,381 @@ h3 {
   font-weight:500;
 }
 
+/* Events */
+
+#event {
+  background: #F0F0F0;
+}
+
+#event-container {
+  max-width: 100%;
+  padding-bottom: 5%;
+}
+
+.event-content-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 3%;
+  margin-left: 8.5%;
+}
+
+.event-content {
+  background-color: white;
+  color: #09032F;
+  text-align: left;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  object-fit: cover;
+  border-radius:20px 18px;
+  width: 240px;
+  margin: 0 10px;
+  font-family: Space Grotesk,  -apple-system, sans-serif, -apple-system, sans-serif;
+}
+
+.event-content img {
+  max-width:100%;
+  max-height:100%;
+}
+
+.event-content p {
+  font-size: 16px;
+  font-weight: 700;
+  padding: 15px;
+  height: 130px;
+}
+
+.event-content span {
+  font-size: 12px;
+  color: #5E5E5E;
+}
+
+.event-content a {
+  border-radius: 24px;
+  background-color: none;
+  border: 1px solid #09032F;
+  font-size: 12px;
+  padding: 0 10px;
+}
+
+.event-content-details {
+  padding: 10px;
+}
+
+.event-form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.event-content-container {
+  min-width: 400px;
+  position: relative;
+  overflow: scroll;
+  direction: rtl;  /* <-- the trick */
+}
+.event-title-container {
+  flex-direction: column;
+  padding:5% 10%;
+  padding-bottom: 1%;
+}
+.event-title {
+  color: #09032F;
+  font-family: Space Grotesk,  -apple-system, sans-serif;
+  font-size:44px;
+}
+.event-content {
+  min-width: 250px;
+}
+.event-content p {
+  max-height: 130px;
+  /* white-space: nowrap; */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.event-description {
+  max-width: 950px;
+}
+h5.event-description {
+  font-size: 18px;
+  text-align: left;
+  padding: 15px 0px;
+}
+.event-description a {
+  width: 100%;
+  margin: 20px 0px;
+  margin-left: 0px;
+}
+
+/* Community */
+#community {
+  background: #FAFAFA;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.community-flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.community-items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+
+.community-mobile {
+  display: none;
+}
+
+.community-logo {
+  margin: 5px 10px;
+}
+
+.community-logo:hover {
+  border: 0.2px solid #5252FF;
+  border-radius: 5px;
+}
+
+.community-title {
+  margin-bottom: 50px;
+}
+
+.community-title p {
+  max-width: 675px;
+  font-size: 18px;
+}
+
+/* Newsletter */
+#newsletter-container {
+  background-color: #0C1C21;
+  background-image:url("/welcome_bg.svg");
+  max-width: 100%;
+  padding: 12.5%;
+  padding-top: 5%;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+#newsletter-cta-container {
+  background-color: #0C1C21;
+  max-width: 100%;
+  padding: 12.5%;
+  padding-top: 5%;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.newsletter-title-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.newsletter-container-left {
+  display: flex;
+  flex-direction: row;
+}
+
+.newsletter-container-right {
+  display: flex;
+  flex-direction: row;
+}
+
+.newsletter-title {
+  font-size: 44px;
+  font-family: Space Grotesk,  -apple-system, sans-serif, -apple-system, sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  color: white;
+}
+
+.newsletter-description {
+  font-size: 20px;
+  font-family: Space Grotesk,  -apple-system, sans-serif, -apple-system, sans-serif;
+  color: white;
+}
+
+.subscribe-btn {
+  margin-left: 30px;
+}
+
+.newsletter-content-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 3%;
+}
+
+.newsletter-content {
+  background-color: white;
+  color: #09032F;
+  text-align: left;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  object-fit: cover;
+  margin: 0 10px;
+  font-family: Space Grotesk,  -apple-system, sans-serif, -apple-system, sans-serif;
+}
+
+.newsletter-content img {
+  max-width:100%;
+  max-height:100%;
+}
+
+.newsletter-content p {
+  font-size: 16px;
+  font-weight: 700;
+  padding: 15px;
+  height: 130px;
+}
+
+.newsletter-content span {
+  font-size: 12px;
+  color: #5E5E5E;
+}
+
+.newsletter-content a {
+  border-radius: 24px;
+  background-color: none;
+  border: 1px solid #09032F;
+  font-size: 12px;
+  padding: 0 10px;
+}
+
+.newsletter-content-details {
+  padding: 10px;
+}
+
+.newsletter-form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.subscribe-form-container {
+  width: 100%;
+  max-width: 660px;
+  min-height: 660px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background: url(/newsletter.svg);
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.subscribe-form-container .join {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+  text-transform: uppercase;
+  color: white;
+  font-family: Space Grotesk, -apple-system, sans-serif;
+}
+
+.subscribe-form-container .cc {
+  font-weight: 400;
+  font-size: 53px;
+  color: white;
+  font-family: Russo One, -apple-system, sans-serif;
+}
+
+.subscribe-form-container .weekly {
+  font-weight: 400;
+  font-size: 44.722px;
+  color: #5252ff;
+  font-family: Russo One, -apple-system, sans-serif;
+}
+
+.subscribe-form-container .content {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  max-width: 524px;
+  text-align: center;
+  margin-top: 20px;
+  color: white;
+  font-family: Space Grotesk, -apple-system, sans-serif;
+}
+
+.subscribe-form-container .email-form {
+  width: 100%;
+  max-width: 568px;
+  font-family: Space Grotesk, -apple-system, sans-serif;
+}
+
+.subscribe-form-container .email-box {
+  background: #0f0f0f;
+  border: 1px solid #fff;
+  border-radius: 30px;
+  width: 100%;
+  max-width: 568px;
+  height: 63px;
+  display: flex;
+  margin-top: 20px;
+}
+
+.subscribe-form-container .email-box-input {
+  height: 100%;
+  flex: 1 1;
+  border: none;
+  outline: none;
+  background: #0C1C21;
+  color: white;
+  font-weight: 400;
+  font-size: 16px;
+  padding-left: 30px;
+  border-radius: 30px 0 0 30px;
+}
+
+.subscribe-form-container .email-box-input::placeholder {
+  color: white;
+}
+
+.subscribe-form-container .email-box .submit {
+  padding: 0 45px;
+  height: 100%;
+  cursor: pointer;
+  background: #fff;
+  color: #000000;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 16px;
+}
+
+.subscribe-form-container .email-box .submit:hover {
+  background-color: #5c636a;
+  border-color: #5c636a;
+  color: white;
+}
+
 /* Job */
 #hero-job {
   background-color: #EFEFEF;
-  padding: 5%;
-  padding-bottom: 12%;
   text-align: left;
+}
+
+#hero-container {
+  max-width: 100%;
+  padding: 12.5%;
+  padding-bottom: 5%;
+  padding-top: 5%;
 }
 
 .job-title {
@@ -182,8 +593,6 @@ h3 {
 
 .footer-container {
   position: relative;
-  /* margin-top: 10%; */
-  background-color: #EFEFEF;
 }
 
 footer {
@@ -259,6 +668,91 @@ footer {
 }
 .contact-us_body h3 {
   font-size: 48px;
-  font-family: "Space Grotesk";
+  font-family: Space Grotesk,  -apple-system, sans-serif;
   font-weight: 800;
+}
+
+/* Mobile */
+
+
+@media screen and (max-width: 768px) {
+  h3, .welcome-title {
+    font-size: 24px;
+  }
+  h4 {
+    font-size: 20px;
+  }
+  p {
+    font-size: 14px;
+    color: rgba(249, 249, 249, 0.5);
+  }
+  .newsletter-content p {
+    color: #09032F;
+  }
+  .newsletter-content span {
+    color: #5E5E5E;
+  }
+  .container {
+    padding: 50px 0;
+    max-width: 85%;
+  }
+  #welcome {
+    padding: 80px 0;
+  }
+  .welcome-content-container {
+    flex-direction: column;
+  }
+  .welcome-image img {
+    max-width: 254px;
+  }
+  .community-desktop {
+    display: none;
+  }
+  .community-mobile {
+    display: flex;
+  }
+  .community-items a {
+    margin: 2px auto;
+    /* height: 80px */
+    width: 6rem;
+  }
+  .community-title {
+    margin-bottom: 0px;
+  }
+  .community-title p {
+    color: #5E5E5E;
+    padding: 30px 0;
+  }
+  .newsletter-content-container {
+    min-width: 400px;
+    position: relative;
+    overflow: scroll;
+    direction: rtl;  /* <-- the trick */
+  }
+  .newsletter-title-container {
+    flex-direction: column;
+  }
+  .newsletter-content {
+    min-width: 250px;
+  }
+  h5.newsletter-description {
+    font-size: 18px;
+    text-align: left;
+    padding: 15px 0px;
+  }
+  .newsletter-description a {
+    width: 100%;
+    margin: 20px 0px;
+    margin-left: 0px;
+  }
+  .job-content-container {
+    flex-direction: column;
+  }
+  .job-title p {
+    color: #364549;
+    font-size: 18px;
+  }
+  .job-list {
+    margin: 10px 0;
+  }
 }
