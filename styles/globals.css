@@ -179,6 +179,114 @@ h5 {
   font-weight:500;
 }
 
+/* Events */
+
+#event {
+  background: #F0F0F0;
+}
+
+#event-container {
+  max-width: 100%;
+  padding-bottom: 5%;
+}
+
+.event-content-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 3%;
+  margin-left: 8.5%;
+}
+
+.event-content {
+  background-color: white;
+  color: #09032F;
+  text-align: left;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  object-fit: cover;
+  border-radius:20px 18px;
+  width: 240px;
+  margin: 0 10px;
+  font-family: Space Grotesk,  -apple-system, sans-serif, -apple-system, sans-serif;
+}
+
+.event-content img {
+  max-width:100%;
+  max-height:100%;
+}
+
+.event-content p {
+  font-size: 16px;
+  font-weight: 700;
+  padding: 15px;
+  height: 130px;
+}
+
+.event-content span {
+  font-size: 12px;
+  color: #5E5E5E;
+}
+
+.event-content a {
+  border-radius: 24px;
+  background-color: none;
+  border: 1px solid #09032F;
+  font-size: 12px;
+  padding: 0 10px;
+}
+
+.event-content-details {
+  padding: 10px;
+}
+
+.event-form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.event-content-container {
+  min-width: 400px;
+  position: relative;
+  overflow: scroll;
+  direction: rtl;  /* <-- the trick */
+}
+.event-title-container {
+  flex-direction: column;
+  padding:5% 10%;
+  padding-bottom: 1%;
+}
+.event-title {
+  color: #09032F;
+  font-family: Space Grotesk,  -apple-system, sans-serif;
+  font-size:44px;
+}
+.event-content {
+  min-width: 250px;
+}
+.event-content p {
+  max-height: 130px;
+  /* white-space: nowrap; */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.event-description {
+  max-width: 950px;
+}
+h5.event-description {
+  font-size: 18px;
+  text-align: left;
+  padding: 15px 0px;
+}
+.event-description a {
+  width: 100%;
+  margin: 20px 0px;
+  margin-left: 0px;
+}
+
 /* Community */
 #community {
   background: #FAFAFA;
@@ -196,6 +304,10 @@ h5 {
   flex-direction: row;
   flex-wrap: wrap;
   margin: 10px 0;
+}
+
+.community-mobile {
+  display: none;
 }
 
 .community-logo {
@@ -242,6 +354,11 @@ h5 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.newsletter-container-left {
+  display: flex;
+  flex-direction: row;
 }
 
 .newsletter-container-right {
@@ -295,7 +412,8 @@ h5 {
 .newsletter-content p {
   font-size: 16px;
   font-weight: 700;
-  padding: 10px;
+  padding: 15px;
+  height: 130px;
 }
 
 .newsletter-content span {
@@ -552,4 +670,89 @@ footer {
   font-size: 48px;
   font-family: Space Grotesk,  -apple-system, sans-serif;
   font-weight: 800;
+}
+
+/* Mobile */
+
+
+@media screen and (max-width: 768px) {
+  h3, .welcome-title {
+    font-size: 24px;
+  }
+  h4 {
+    font-size: 20px;
+  }
+  p {
+    font-size: 14px;
+    color: rgba(249, 249, 249, 0.5);
+  }
+  .newsletter-content p {
+    color: #09032F;
+  }
+  .newsletter-content span {
+    color: #5E5E5E;
+  }
+  .container {
+    padding: 50px 0;
+    max-width: 85%;
+  }
+  #welcome {
+    padding: 80px 0;
+  }
+  .welcome-content-container {
+    flex-direction: column;
+  }
+  .welcome-image img {
+    max-width: 254px;
+  }
+  .community-desktop {
+    display: none;
+  }
+  .community-mobile {
+    display: flex;
+  }
+  .community-items a {
+    margin: 2px auto;
+    /* height: 80px */
+    width: 6rem;
+  }
+  .community-title {
+    margin-bottom: 0px;
+  }
+  .community-title p {
+    color: #5E5E5E;
+    padding: 30px 0;
+  }
+  .newsletter-content-container {
+    min-width: 400px;
+    position: relative;
+    overflow: scroll;
+    direction: rtl;  /* <-- the trick */
+  }
+  .newsletter-title-container {
+    flex-direction: column;
+  }
+  .newsletter-content {
+    min-width: 250px;
+  }
+  h5.newsletter-description {
+    font-size: 18px;
+    text-align: left;
+    padding: 15px 0px;
+  }
+  .newsletter-description a {
+    width: 100%;
+    margin: 20px 0px;
+    margin-left: 0px;
+  }
+  .job-content-container {
+    flex-direction: column;
+  }
+  .job-title p {
+    color: #364549;
+    font-size: 18px;
+  }
+  .job-list {
+    margin: 10px 0;
+  }
 }

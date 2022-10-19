@@ -2,8 +2,10 @@ import Link from 'next/link';
 
 const NewsletterItem = ({post}) => {
     const {created_at, published_at, content: {
-        Banner, Link, PublishedDate, Text
+        Banner, Link, PublishDate, Text
     }} = post;
+    const date = post.content.PublishDate.split(' ')[0];
+    console.log(date);
     return (
         <div className="newsletter-content">
             <img src={Banner.filename} alt={Banner.alt} />
@@ -11,9 +13,9 @@ const NewsletterItem = ({post}) => {
             {Text}
             </p>
             <div className="newsletter-content-details flex-space-between">
-                <span>
-                {PublishedDate}
-                </span>
+                <div>
+                {date}
+                </div>
                 <a href={Link.url} target="_blank" rel="noopener noreferrer">
                     Read More
                 </a>

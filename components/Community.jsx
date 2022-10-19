@@ -97,7 +97,7 @@ const Hero = () => {
       </Container>
       <Container>
         <Row className="community-flex align-items-center">
-          <Col lg={6}>
+          <Col className="community-desktop" lg={6}>
             <div className="mt-5 mt-lg-0">
               <img src="/community-maps.svg" alt="" className="img-fluid mx-auto d-block"/>
             </div>
@@ -112,6 +112,11 @@ const Hero = () => {
                     <img src={item.logo} alt={item.alt} className="img-fluid community-logo d-block"/>
                 </a>
                 ))}
+            </div>
+          </Col>
+          <Col className="community-mobile" lg={6}>
+            <div className="mt-5 mt-lg-0">
+              <img src="/community-stats.svg" alt="" className="img-fluid mx-auto d-block"/>
             </div>
           </Col>
         </Row>

@@ -8,7 +8,7 @@ const Newsletter = ({ newsletter }) => {
       <Container id="newsletter-container">
         <Row className="align-items-center">
             <div className="newsletter-title-container">
-                <div className="newsletter-container-right">
+                <div className="newsletter-container-left">
                     <h3 className="welcome-title">
                         Our Newsletters
                     </h3>
