@@ -208,8 +208,9 @@ h5 {
   overflow: hidden;
   object-fit: cover;
   border-radius:20px 18px;
-  width: 240px;
-  margin: 0 10px;
+  min-width: 300px;
+  height: 470px;
+  margin: 0 15px;
   font-family: Space Grotesk,  -apple-system, sans-serif, -apple-system, sans-serif;
 }
 
@@ -222,7 +223,12 @@ h5 {
   font-size: 16px;
   font-weight: 700;
   padding: 15px;
-  height: 130px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5; /* number of lines to show */
+  -webkit-box-orient: vertical;
+  /* line-height: 25px; */
 }
 
 .event-content span {
@@ -233,13 +239,14 @@ h5 {
 .event-content a {
   border-radius: 24px;
   background-color: none;
-  border: 1px solid #09032F;
-  font-size: 12px;
-  padding: 0 10px;
+  border: 2px solid #09032F;
+  font-size: 18px;
+  padding: 5px 20px;
 }
 
 .event-content-details {
-  padding: 10px;
+  padding: 0px 10px;
+  margin: auto;
 }
 
 .event-form {
@@ -252,7 +259,7 @@ h5 {
   min-width: 400px;
   position: relative;
   overflow: scroll;
-  direction: rtl;  /* <-- the trick */
+  direction: ltr;
 }
 .event-title-container {
   flex-direction: column;
@@ -263,15 +270,6 @@ h5 {
   color: #09032F;
   font-family: Space Grotesk,  -apple-system, sans-serif;
   font-size:44px;
-}
-.event-content {
-  min-width: 250px;
-}
-.event-content p {
-  max-height: 130px;
-  /* white-space: nowrap; */
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 .event-description {
   max-width: 950px;

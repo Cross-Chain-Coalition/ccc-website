@@ -16,9 +16,7 @@ const NewsletterItem = ({post}) => {
             </p>
             <div className="newsletter-content-details flex-space-between">
                 <span sytle={{"color":"#5E5E5E","fontSize":"12px"}}>
-                    {/* {longMonth} */}
                     {convertDateStringWithWeekDay(post.content.PublishDate, true)}
-                {/* {dateBefore} */}
                 </span>
                 <a href={Link.url} target="_blank" rel="noopener noreferrer" className="btn btn-secondary btn-header">
                     Read More
