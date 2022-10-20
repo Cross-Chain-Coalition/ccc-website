@@ -24,7 +24,7 @@ welcomes
 @PhilippZentner, CEO &  Founder of LiFi, known for their plug & play SDK to take your project cross chain in an instant ✨`}
             </p>
             <div className="event-content-details flex-space-between">
-                <a href={RegistrationLink.url} target="_blank" rel="noopener noreferrer">
+                <a href={RegistrationLink.url} target="_blank" rel="noopener noreferrer" className="btn btn-secondary btn-header">
                     Read More
                 </a>
             </div>
