@@ -5,11 +5,11 @@ const EventItem = ({post}) => {
     const {name, created_at, published_at, content: {
         Image, Link, EventTime, Description, RegistrationLink
     }} = post;
-    var your_date_object = new Date();
+    const your_date_object = new Date();
     your_date_object.setTime(Date.parse( EventTime ));
 
-    var min = your_date_object.getUTCMinutes();
-    var hour = your_date_object.getUTCHours();
+    const min = your_date_object.getUTCMinutes();
+    const hour = your_date_object.getUTCHours();
     console.log(hour, min)
     return (
         <div className="event-content">
@@ -29,8 +29,8 @@ const EventItem = ({post}) => {
             <h5 style={{"fontSize":"24px","fontFamily":"Space Grotesk", "padding":"5px 15px"}}>
                 {name}
             </h5>
-            <p  style={{"fontSize":"18px","fontFamily":"League Spartan", "padding":"5px 15px"}}>
-            CCC's very own @LewisTaariq welcomes @PhilippZentner, CEO &  Founder of LiFi, known for their plug & play SDK to take your project cross chain in an instant ✨` {Description.content.content}
+            <p style={{"fontSize":"18px","fontFamily":"League Spartan", "padding":"5px 15px"}}>
+            CCCs very own @LewisTaariq welcomes @PhilippZentner, CEO &  Founder of LiFi, known for their plug & play SDK to take your project cross chain in an instant ✨ {Description.content.content}
             </p>
             <div className="event-content-details flex-space-between">
                 <a href={RegistrationLink.url} target="_blank" rel="noopener noreferrer" className="btn btn-secondary btn-header">
