@@ -16,7 +16,8 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "reactstrap": "^9.1.4",
-    "storyblok-js-client": "^4.5.8"
+    "storyblok-js-client": "^4.5.8",
+    "storyblok-rich-text-react-renderer": "^2.6.1"
   },
   "devDependencies": {
     "eslint": "8.25.0",
