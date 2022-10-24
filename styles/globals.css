@@ -37,9 +37,15 @@ p {
   }
 }
 
+.logo-dekstop {
+  display: flex;
+}
+
+.logo-mobile {
+  display: none;
+}
+
 .section {
-  /* padding-top: 100px;
-  padding-bottom: 100px; */
   position: relative;
 }
 
@@ -221,29 +227,36 @@ h5 {
   font-family: Space Grotesk,  -apple-system, sans-serif, -apple-system, sans-serif;
 }
 
-.toggle-section {
+.toggle-section-dekstop {
   background-color: #0C1C21;
   border-radius: 30px;
   display: flex;
   width: 250px;
 }
 
-#upcoming-toggle {
+.toggle-section-mobile {
+  background-color: #0C1C21;
+  border-radius: 30px;
+  display: none;
+  width: 250px;
+}
+
+#upcoming-toggle-dekstop {
   background-color: #0C1C21;
   color: #949292;
   border-radius: 30px;
   padding: 15px 30px;
 }
 
-#past-toggle {
+#past-toggle-dekstop {
   background-color: #0C1C21;
   color: #949292;
   border-radius: 30px;
   padding: 15px 50px;
 }
 
-#upcoming-toggle.active,
-#past-toggle.active {
+#upcoming-toggle-dekstop.active,
+#past-toggle-dekstop.active {
   color: #0C1C21;
   background-color: white;
 }
@@ -583,7 +596,7 @@ h5.event-description {
   text-align: left;
 }
 
-#hero-container {
+#job-container {
   max-width: 100%;
   padding: 12.5%;
   padding-bottom: 5%;
@@ -720,6 +733,12 @@ footer {
     font-size: 14px;
     color: rgba(249, 249, 249, 0.5);
   }
+  .logo-dekstop {
+    display: none;
+  }
+  .logo-mobile {
+    display: flex;
+  }
   .newsletter-content p {
     color: #09032F;
   }
@@ -739,6 +758,73 @@ footer {
   .welcome-image img {
     max-width: 254px;
   }
+  #hero-title {
+    padding-top: 0;
+  }
+  .hero {
+    padding-top: 0;
+  }
+  .btn-hero {
+    width: 100%;
+  }
+  .toggle-section-dekstop {
+    display: none;
+  }
+  .toggle-section-mobile {
+    background-color: #0C1C21;
+    border-radius: 30px;
+    display: flex;
+    width: 200px;
+  }
+  
+  #upcoming-toggle-mobile {
+    background-color: #0C1C21;
+    color: #949292;
+    border-radius: 30px;
+    padding: 15px 18px;
+    font: bold 12px Space Grotesk;
+  }
+  
+  #past-toggle-mobile {
+    background-color: #0C1C21;
+    color: #949292;
+    border-radius: 30px;
+    padding: 15px 35px;
+    font: bold 12px Space Grotesk;
+  }
+  
+  #upcoming-toggle-mobile.active,
+  #past-toggle-mobile.active {
+    color: #0C1C21;
+    background-color: white;
+  }
+  .event-title {
+    font: 24px Space Grotesk;
+    font-weight: 800;
+  }
+  .event-description {
+    color: #5E5E5E;
+    font-family: League Spartan,  -apple-system, sans-serif;
+    font-size: 18px;
+    margin-bottom:30px;
+  }
+  .event-content-container {
+    padding-top: 30px;
+  }
+  .event-content {
+    height: 400px;
+  }
+  .event-content p {
+    color: #5E5E5E;
+    font: 12px League Spartan;
+    height: 70px;
+  }
+  .event-content-details a {
+    font: 12px Space Grotesk;
+  }
+  #community {
+    padding: 0;
+  }
   .community-desktop {
     display: none;
   }
@@ -756,6 +842,9 @@ footer {
   .community-title p {
     color: #5E5E5E;
     padding: 30px 0;
+  }
+  #newsletter-container {
+    padding-top:10%;
   }
   .newsletter-content-container {
     min-width: 400px;
@@ -779,6 +868,25 @@ footer {
     margin: 20px 0px;
     margin-left: 0px;
   }
+  .subscribe-form-container .email-form {
+    max-width:fit-content;
+  }
+  .subscribe-form-container .email-box-input,
+  .subscribe-form-container .email-box .submit {
+    font-size: 12px;
+  }
+  .subscribe-form-container .email-box .submit {
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 800;
+  }
+  .subscribe-form-container .email-box {
+    max-width:fit-content;
+    height: 50px;
+  }
+  #job-container {
+    padding-top:12.5%;
+  }
   .job-content-container {
     flex-direction: column;
   }
@@ -788,5 +896,30 @@ footer {
   }
   .job-list {
     margin: 10px 0;
+  }
+  #newsletter-cta-container {
+    padding-bottom: 50%;
+  }
+  .v203_7341 {
+    width: 90%;
+    left: 5%;
+  }
+  .v203_7341 {
+    height: 200px;
+    top: -180px;
+  }
+  .contact-us_body {
+    width: 100%;
+    left: 0;
+  }
+  .contact-us_body h3 {
+    font-size: 30px;
+    font: Space Grotesk, sans-serif;
+  }
+  footer a {
+    display:flex;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+    flex-direction: column;
   }
 }

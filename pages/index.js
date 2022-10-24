@@ -76,15 +76,21 @@ export default function Home({ all_posts, newsletter, events }) {
 
   // Toggle related setting
   const handleClick = () => {
-    let pastToggle = document.getElementById('past-toggle');
-    let upcomingToggle = document.getElementById('upcoming-toggle');
+    let pastToggleDekstop = document.getElementById('past-toggle-dekstop');
+    let upcomingToggleDekstop = document.getElementById('upcoming-toggle-dekstop');
+    let pastToggleMobile = document.getElementById('past-toggle-mobile');
+    let upcomingToggleMobile = document.getElementById('upcoming-toggle-mobile');
     setToggled(current => !current);
     if (!toggled) {
-      pastToggle.classList.add('active');
-      upcomingToggle.classList.remove('active');
+      pastToggleDekstop.classList.add('active');
+      upcomingToggleDekstop.classList.remove('active');
+      pastToggleMobile.classList.add('active');
+      upcomingToggleMobile.classList.remove('active');
     } else {
-      upcomingToggle.classList.add('active');
-      pastToggle.classList.remove('active');
+      upcomingToggleDekstop.classList.add('active');
+      pastToggleDekstop.classList.remove('active');
+      upcomingToggleMobile.classList.add('active');
+      pastToggleMobile.classList.remove('active');
     }
   };
 
@@ -107,14 +113,18 @@ export default function Home({ all_posts, newsletter, events }) {
                       <h3 className="event-title">
                         Our Events
                       </h3>
-                      <div className="toggle-section">
-                        <button disabled={!toggled} id="upcoming-toggle" className="active" onClick={handleClick}>UPCOMING</button>
-                        <button disabled={toggled} id="past-toggle" className="" onClick={handleClick}>PAST</button>
+                      <div className="toggle-section-dekstop">
+                        <button disabled={!toggled} id="upcoming-toggle-dekstop" className="active" onClick={handleClick}>UPCOMING</button>
+                        <button disabled={toggled} id="past-toggle-dekstop" className="" onClick={handleClick}>PAST</button>
                       </div>
                     </div>
                     <p className="event-description">
                     Over the past quarter, we’ve hosted 6 events across 4 continents bringing together over 6,000 web3 builders! In an industry as remote as web3, events are the glue to a strong community. Hosting weekly AMA’s, monthly IRL networking meetups, & quarterly hackathons is our secret recipe for spurring cross chain innovation. 
                     </p>
+                    <div className="toggle-section-mobile">
+                      <button disabled={!toggled} id="upcoming-toggle-mobile" className="active" onClick={handleClick}>UPCOMING</button>
+                      <button disabled={toggled} id="past-toggle-mobile" className="" onClick={handleClick}>PAST</button>
+                    </div>
                   </div>
               </div>
             <div className="event-content-container">

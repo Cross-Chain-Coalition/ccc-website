@@ -29,8 +29,7 @@ const dateOptions = {
 };
   
 const dateOptionsWithWeekDay = {
-    year: "numeric",
-    month: "long",
+    month: "short",
     day: "numeric",
     weekday: "short",
 };
@@ -55,6 +54,15 @@ const stamp = Date.parse(dateStr);
 const date = new Date(stamp);
 
 return date.toLocaleDateString("en-US", dateOptions);
+};
+
+export const convertDateStringWithDay = (dateStr, toLocal = false) => {
+    const stamp = toLocal
+        ? convertUTCtoLocalTime(parseDate(dateStr))
+        : parseDate(dateStr).getTime();
+    const date = new Date(stamp);
+
+    return date.toLocaleDateString("en-US", dateOptionsWithWeekDay);
 };
 
 export const convertDateStringWithWeekDay = (dateStr, toLocal = false) => {

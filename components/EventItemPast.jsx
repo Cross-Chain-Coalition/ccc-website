@@ -1,6 +1,5 @@
-import Link from 'next/link';
-import { convertDateStringWithWeekDay } from '../utils/date';
-import { render, NODE_IMAGE } from "storyblok-rich-text-react-renderer";
+import { convertDateStringWithDay } from '../utils/date';
+import { render } from "storyblok-rich-text-react-renderer";
 
 const EventItemPast = ({post}) => {
     const {name, created_at, published_at, content: {
@@ -20,7 +19,7 @@ const EventItemPast = ({post}) => {
                 <div style={{"padding":"5px 10px"}}>
                     <img src="/date.svg" alt="date icon" style={{"padding":"5px"}} />
                     <span style={{"paddingRight":"10px"}}>
-                        {convertDateStringWithWeekDay(EventTime)}
+                        {convertDateStringWithDay(EventTime)}
                     </span>
                     <img src="/time.svg" alt="time icon" style={{"padding":"5px"}} />
                     <span>

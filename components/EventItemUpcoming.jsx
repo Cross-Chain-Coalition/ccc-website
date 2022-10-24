@@ -1,6 +1,5 @@
-import Link from 'next/link';
-import { convertDateStringWithWeekDay } from '../utils/date';
-import { render, NODE_IMAGE } from "storyblok-rich-text-react-renderer";
+import { convertDateStringWithDay } from '../utils/date';
+import { render } from "storyblok-rich-text-react-renderer";
 
 const EventItemUpcoming = ({post}) => {
     const {name, created_at, published_at, content: {
@@ -12,6 +11,7 @@ const EventItemUpcoming = ({post}) => {
     const min = your_date_object.getUTCMinutes();
     const hour = your_date_object.getUTCHours();
     console.log(hour, min)
+    console.log("This is content of Upcoming Events", post.content);
     return (
         <div className="event-content">
             <img src={Image.filename} alt={Image.alt} />
@@ -19,7 +19,7 @@ const EventItemUpcoming = ({post}) => {
                 <div style={{"padding":"5px 10px"}}>
                     <img src="/date.svg" alt="date icon" style={{"padding":"5px"}} />
                     <span style={{"paddingRight":"10px"}}>
-                        {convertDateStringWithWeekDay(EventTime)}
+                        {convertDateStringWithDay(EventTime)}
                     </span>
                     <img src="/time.svg" alt="time icon" style={{"padding":"5px"}} />
                     <span>
