@@ -29,6 +29,14 @@ const Header = () => {
       setSticky(false);
     }
   }
+  const handleNoScroll = () => {
+    const burger = document.getElementById('burger-menu');
+  
+    burger.addEventListener('click', () => {
+      document.body.classList.add('no-scroll')
+      console.log(document.body.classList.contains('no-scroll'))
+    })
+  }
 
   return (
     <div className={`header${sticky ? ' sticky' : ''}`}>
@@ -36,12 +44,12 @@ const Header = () => {
         <NavbarBrand className="logo-mobile" href="/">
           <Image src="/ccc-logo.png" alt="CCC Hero Image" width={80} height={80} />
         </NavbarBrand>
-        <NavbarToggler onClick={toggle} />
+        <NavbarToggler id="burger-menu" onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <NavbarBrand className="logo-dekstop" href="/">
             <Image src="/ccc-logo.png" alt="CCC Hero Image" width={80} height={80} />
           </NavbarBrand>
-          <Nav className="m-auto" navbar>
+          <Nav navbar>
             <NavItem>
               <NavLink href="#welcome">About us</NavLink>
             </NavItem>
@@ -59,8 +67,6 @@ const Header = () => {
             Join Us
           </a>
         </Collapse>
-        {/* <Container className="container-header">
-        </Container> */}
       </Navbar>
     </div>
   );

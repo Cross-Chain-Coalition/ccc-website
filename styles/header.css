@@ -1,9 +1,11 @@
 .header {
-padding: 0px 10%;
+    padding: 0px 10%;
 }
-
 .navbar-collapse {
     border-bottom: 1px solid rgba(94, 94, 94, 0.12);
+}
+.navbar-expand-md .navbar-nav {
+    margin: auto;
 }
 .header .nav-item {
 padding-left: 50px;
@@ -45,6 +47,11 @@ opacity: 1;
     font-family: "Space Grotes", -apple-system, sans-serif;
 }
 
+.no-scroll {
+    overflow-y: hidden;
+    position: fixed;
+}
+
 @media screen and (max-width: 768px){
     .header {
         padding: 0px;
@@ -52,7 +59,36 @@ opacity: 1;
     .navbar>.container-fluid {
         padding: 0px 7%;
     }
+    .header.sticky .navbar {
+        position: fixed;
+        overflow-y: hidden;
+        opacity: 0;
+        padding: 0px;
+        -webkit-animation: fadeInDown .15s ease-in-out 0s 1 normal none running;
+        animation: fadeInDown .15s ease-in-out 0s 1 normal none running;
+        -webkit-transition: all .15s cubic-bezier(.645,.045,.355,1);
+        transition: all .15s cubic-bezier(.645,.045,.355,1);
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+                transform: translateY(0%);
+    }
     .navbar-collapse {
+        border-top: 1px solid rgba(94, 94, 94, 0.12);
         height: 90vh;
+    }
+    .navbar-nav {
+        margin-top: 30px;
+    }
+    .header .nav-item {
+        padding: 0px
+    }
+    .nav-link {
+        font-size: 18px;
+        font-weight: 800;
+        font-family: Space Grotesk,  -apple-system, sans-serif;
+        padding: 0px;
+    }
+    .btn-header {
+        display:none;
     }
 }
