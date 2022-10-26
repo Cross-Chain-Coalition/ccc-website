@@ -94,8 +94,8 @@ const heroWelcome = [
   },
   {
     img: "/industry-alpha.png",
-    alt: "Industry aplha",
-    title: "Industry Aplha",
+    alt: "Industry alpha",
+    title: "Industry Alpha",
     description: "News and insights on the space to make sure you never miss a beat"
   },
   {

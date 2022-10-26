@@ -37,30 +37,30 @@ const Header = () => {
           <Image src="/ccc-logo.png" alt="CCC Hero Image" width={80} height={80} />
         </NavbarBrand>
         <NavbarToggler onClick={toggle} />
-        <Container>
-          <Collapse isOpen={isOpen} navbar>
-            <NavbarBrand className="logo-dekstop" href="/">
-              <Image src="/ccc-logo.png" alt="CCC Hero Image" width={80} height={80} />
-            </NavbarBrand>
-            <Nav className="m-auto" navbar>
-              <NavItem>
-                <NavLink href="#welcome">About us</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="#community">Community</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="#newsletter">Newsletter</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="#contact">Contact Us</NavLink>
-              </NavItem>
-            </Nav>
-            <a href={TELEGRAM_LINK} target="_blank" rel="noopener noreferrer" className="btn btn-secondary btn-header">
-              Join Us
-            </a>
-          </Collapse>
-        </Container>
+        <Collapse isOpen={isOpen} navbar>
+          <NavbarBrand className="logo-dekstop" href="/">
+            <Image src="/ccc-logo.png" alt="CCC Hero Image" width={80} height={80} />
+          </NavbarBrand>
+          <Nav className="m-auto" navbar>
+            <NavItem>
+              <NavLink href="#welcome">About us</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="#community">Community</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="#newsletter">Newsletter</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="#contact">Contact Us</NavLink>
+            </NavItem>
+          </Nav>
+          <a href={TELEGRAM_LINK} target="_blank" rel="noopener noreferrer" className="btn btn-secondary btn-header">
+            Join Us
+          </a>
+        </Collapse>
+        {/* <Container className="container-header">
+        </Container> */}
       </Navbar>
     </div>
   );

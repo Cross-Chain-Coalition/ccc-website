@@ -246,6 +246,7 @@ h5 {
   color: #949292;
   border-radius: 30px;
   padding: 15px 30px;
+  border: none;
 }
 
 #past-toggle-dekstop {
@@ -253,12 +254,14 @@ h5 {
   color: #949292;
   border-radius: 30px;
   padding: 15px 50px;
+  border: none;
 }
 
 #upcoming-toggle-dekstop.active,
 #past-toggle-dekstop.active {
   color: #0C1C21;
   background-color: white;
+  border: none;
 }
 
 .event-content img {
@@ -749,6 +752,18 @@ footer {
     padding: 50px 0;
     max-width: 85%;
   }
+  nav {
+    border-bottom: 1px solid rgba(94, 94, 94, 0.3);
+    padding: 0px;
+  }
+  .navbar-toggler {
+    border: none;
+    color: none transparent;
+  }
+  .hero-title {
+    font-size: 44px;
+    line-height: 44px;
+  }
   #welcome {
     padding: 80px 0;
   }
@@ -759,13 +774,20 @@ footer {
     max-width: 254px;
   }
   #hero-title {
-    padding-top: 0;
+    padding-top: 50px;
   }
   .hero {
     padding-top: 0;
   }
   .btn-hero {
     width: 100%;
+  }
+  .eco-description {
+    padding: 0px 10%;
+    color: #09032F;
+    font-family: League Spartan,  -apple-system, sans-serif;
+    font-size: 18px;
+    margin: 0px;
   }
   .toggle-section-dekstop {
     display: none;
@@ -774,7 +796,7 @@ footer {
     background-color: #0C1C21;
     border-radius: 30px;
     display: flex;
-    width: 200px;
+    width: 180px;
   }
   
   #upcoming-toggle-mobile {
@@ -783,6 +805,7 @@ footer {
     border-radius: 30px;
     padding: 15px 18px;
     font: bold 12px Space Grotesk;
+    border: none;
   }
   
   #past-toggle-mobile {
@@ -791,12 +814,14 @@ footer {
     border-radius: 30px;
     padding: 15px 35px;
     font: bold 12px Space Grotesk;
+    border: none;
   }
   
   #upcoming-toggle-mobile.active,
   #past-toggle-mobile.active {
     color: #0C1C21;
     background-color: white;
+    border: none;
   }
   .event-title {
     font: 24px Space Grotesk;
@@ -831,10 +856,15 @@ footer {
   .community-mobile {
     display: flex;
   }
+  .community-title-container {
+    padding-bottom: 0px;
+  }
+  .community-items-container {
+    padding-top: 0px;
+  }
   .community-items a {
     margin: 2px auto;
-    /* height: 80px */
-    width: 6rem;
+    width: 100px;
   }
   .community-title {
     margin-bottom: 0px;
@@ -875,10 +905,18 @@ footer {
   .subscribe-form-container .email-box .submit {
     font-size: 12px;
   }
+  .subscribe-form-container .email-box-input::placeholder {
+    font-size: 10.5px;
+    word-spacing: -0.1em;
+  }
+  .subscribe-form-container .email-box-input {
+    padding-right: 20px;
+  }
   .subscribe-form-container .email-box .submit {
     border-radius: 30px;
     font-size: 14px;
     font-weight: 800;
+    padding: 0 20px;
   }
   .subscribe-form-container .email-box {
     max-width:fit-content;
@@ -896,6 +934,7 @@ footer {
   }
   .job-list {
     margin: 10px 0;
+    width: 100%;
   }
   #newsletter-cta-container {
     padding-bottom: 50%;
@@ -921,5 +960,8 @@ footer {
     margin-top: 10px !important;
     margin-bottom: 10px !important;
     flex-direction: column;
+  }
+  .footer-logo {
+    flex-direction: row;
   }
 }

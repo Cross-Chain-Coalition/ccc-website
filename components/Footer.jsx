@@ -53,7 +53,7 @@ const Footer = () => {
                     Contact us
                 </a>
             </div>
-            <div>
+            <div className="footer-logo">
                 <a href={TELEGRAM_LINK} target="_blank" rel="noopener noreferrer" className="footer-menu">
                     <img src="/tele-icon.svg" alt="telegram" />
                 </a>
