@@ -85,6 +85,49 @@ const partnersLogo = [
   }
 ]
 
+const partnersLogoMobile = [
+  {
+    link: "https://polygon.technology/",
+    logo: "/icon_polygon.svg",
+    alt: "Polygon logo"
+  },
+  {
+    link: "https://cosmos.network/",
+    logo: "/icon_cosmos.svg",
+    alt: "Cosmos logo"
+  },
+  {
+    link: "https://solana.com",
+    logo: "/icon_solana.svg",
+    alt: "Solana logo"
+  },
+  {
+    link: "https://ethereum.org/en/",
+    logo: "/icon_eth.svg",
+    alt: "Ethereum logo"
+  },
+  {
+    link: "https://www.palomachain.com/",
+    logo: "/icon_paloma.svg",
+    alt: "Paloma logo"
+  },
+  {
+    link: "https://curve.fi/",
+    logo: "/icon_curve.svg",
+    alt: "Curve finance logo"
+  },
+  {
+    link: "https://layerzero.network/",
+    logo: "/icon_layer.svg",
+    alt: "Layer zero logo"
+  },
+  {
+    link: "https://volume.finance/",
+    logo: "/icon_volume.svg",
+    alt: "Volume finance logo"
+  }
+]
+
 const heroWelcome = [
   {
     img: "/world-class-event.png",
@@ -94,8 +137,8 @@ const heroWelcome = [
   },
   {
     img: "/industry-alpha.png",
-    alt: "Industry aplha",
-    title: "Industry Aplha",
+    alt: "Industry alpha",
+    title: "Industry Alpha",
     description: "News and insights on the space to make sure you never miss a beat"
   },
   {
@@ -139,6 +182,15 @@ const Hero = () => {
           <div id="eco-logo-container">
             <div className="eco-logo-list">
             {partnersLogo.map((item, index) => (
+              <a key={index} href={item.link} target="_blank" rel="noopener noreferrer" className="eco-logo first">
+                <img src={item.logo} alt={item.alt} />
+              </a>
+            ))}
+            </div>
+          </div>
+          <div id="eco-logo-container-mobile">
+            <div className="eco-logo-list-mobile">
+            {partnersLogoMobile.map((item, index) => (
               <a key={index} href={item.link} target="_blank" rel="noopener noreferrer" className="eco-logo first">
                 <img src={item.logo} alt={item.alt} />
               </a>

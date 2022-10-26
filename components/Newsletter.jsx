@@ -25,67 +25,10 @@ const Newsletter = ({ newsletter }) => {
           <div className="newsletter-content-container">
             {/* We use 4 component for now to mimic all 4 newsletter post */}
             {
-                newsletter.map(post => {
-                return <NewsletterItem key={post.id} post={post} />
-                })
-              }
-            {/* <NewsletterItem /> */}
-            {/* <div className="newsletter-content">
-              <img src="/newsletter-img.png" alt="World class event" />
-              <p>
-                The Cross Chain Coalition teams up with TechCrunch, another $100m+ hack, the merge post-mortem, & IBC is taking over the world
-              </p>
-                <div className="newsletter-content-details flex-space-between">
-                    <span>
-                    September 30, 2021
-                    </span>
-                    <a href="https://t.me/crosschaincoalition" target="_blank" rel="noopener noreferrer">
-                        Read More
-                    </a>
-                </div>
-            </div>
-            <div className="newsletter-content">
-              <img src="/newsletter-img.png" alt="World class event" />
-              <p>
-                The Cross Chain Coalition teams up with TechCrunch, another $100m+ hack, the merge post-mortem, & IBC is taking over the world
-              </p>
-                <div className="newsletter-content-details flex-space-between">
-                    <span>
-                    September 30, 2021
-                    </span>
-                    <a href="https://t.me/crosschaincoalition" target="_blank" rel="noopener noreferrer">
-                        Read More
-                    </a>
-                </div>
-            </div>
-            <div className="newsletter-content">
-              <img src="/newsletter-img.png" alt="World class event" />
-              <p>
-                The Cross Chain Coalition teams up with TechCrunch, another $100m+ hack, the merge post-mortem, & IBC is taking over the world
-              </p>
-                <div className="newsletter-content-details flex-space-between">
-                    <span>
-                    September 30, 2021
-                    </span>
-                    <a href="https://t.me/crosschaincoalition" target="_blank" rel="noopener noreferrer">
-                        Read More
-                    </a>
-                </div>
-            </div>
-            <div className="newsletter-content">
-              <img src="/newsletter-img.png" alt="World class event" />
-              <p>
-                The Cross Chain Coalition teams up with TechCrunch, another $100m+ hack, the merge post-mortem, & IBC is taking over the world
-              </p>
-                <div className="newsletter-content-details flex-space-between">
-                    <span>
-                    September 30, 2021
-                    </span>
-                    <a href="https://t.me/crosschaincoalition" target="_blank" rel="noopener noreferrer">
-                        Read More
-                    </a>
-                </div>
-            </div> */}
+              newsletter.map(post => {
+              return <NewsletterItem key={post.id} post={post} />
+              })
+            }
           </div>
 
         </Row>

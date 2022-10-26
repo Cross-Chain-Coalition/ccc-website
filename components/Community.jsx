@@ -83,7 +83,7 @@ const communityLogo = [
 const Hero = () => {
   return (
     <section id="community" className="position-relative">
-      <Container>
+      <Container className="community-title-container">
         <Row className="align-items-center">
           <div className="community-title">
             <h3>
@@ -95,7 +95,7 @@ const Hero = () => {
           </div>
         </Row>
       </Container>
-      <Container>
+      <Container className="community-items-container">
         <Row className="community-flex align-items-center">
           <Col className="community-desktop" lg={6}>
             <div className="mt-5 mt-lg-0">

@@ -31,7 +31,7 @@ const jobList = [
 const Job = () => {
   return (
     <section style={{"paddingBottom":"100px"}} id="hero-job" className="section position-relative">
-      <Container id="hero-container">
+      <Container id="job-container">
         <Row className="align-items-center">
           <div className="job-title">
             <h3>

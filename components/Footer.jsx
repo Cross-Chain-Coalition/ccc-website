@@ -1,8 +1,3 @@
-import React, { useState, useEffect } from 'react';
-import {
-  Row,
-  Col
-} from 'reactstrap';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import { TELEGRAM_LINK, TWITTER_LINK, SUBSTACK_LINK, CONTACT_PIC_LINK, JOBS_LINK } from '../utils/constants';
@@ -24,7 +19,7 @@ const Footer = () => {
                     <h3>
                         If you’re interested in partnering 
                     </h3>
-                    <a href={CONTACT_PIC_LINK} target="_blank" rel="noopener noreferrer" className="btn btn-secondary btn-header">
+                    <a href={CONTACT_PIC_LINK} target="_blank" rel="noopener noreferrer" className="btn btn-secondary btn-footer">
                     Let’s Chat
                     </a> 
                 </div>
@@ -53,18 +48,18 @@ const Footer = () => {
                     Contact us
                 </a>
             </div>
-            <div>
-                <a href={TELEGRAM_LINK} target="_blank" rel="noopener noreferrer" className="footer-menu">
-                    <img src="/tele-icon.svg" alt="telegram" />
-                </a>
-                <a href={SUBSTACK_LINK} target="_blank" rel="noopener noreferrer" className="footer-menu">
-                    <img src="/substack-icon.svg" alt="substack" />
-                </a>
-                <a href={TWITTER_LINK} target="_blank" rel="noopener noreferrer" className="footer-menu">
-                    <img src="/twitter-icon.svg" alt="twitter" />
-                </a>
-            </div>
         </footer>
+        <div className="footer-logo">
+            <a href={TELEGRAM_LINK} target="_blank" rel="noopener noreferrer" className="footer-menu">
+                <img className="footer-icon" src="/tele-icon.svg" alt="telegram" />
+            </a>
+            <a href={SUBSTACK_LINK} target="_blank" rel="noopener noreferrer" className="footer-menu">
+                <img className="footer-icon" src="/substack-icon.svg" alt="substack" />
+            </a>
+            <a href={TWITTER_LINK} target="_blank" rel="noopener noreferrer" className="footer-menu">
+                <img className="footer-icon" src="/twitter-icon.svg" alt="twitter" />
+            </a>
+        </div>
     </div>
   );
 }

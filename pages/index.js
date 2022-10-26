@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import { Container, Row } from 'reactstrap';
@@ -6,7 +7,6 @@ import Layout from "../components/Layout";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Community from "../components/Community";
-// import Newsletter from "../components/Newsletter";
 import Job from "../components/Job";
 import NewsletterCTA from "../components/NewsletterCTA";
 import Footer from "../components/Footer";
@@ -14,13 +14,85 @@ import Footer from "../components/Footer";
 import { fetchAllNewsletters } from './api/axios';
 import { fetchEvents, fetchNewsletters } from '../utils/storyblok';
 import NewsletterItem from '../components/NewsletterItem';
-import EventItem from '../components/EventItem';
+import EventItemUpcoming from '../components/EventItemUpcoming';
+import EventItemPast from '../components/EventItemPast';
+
+import { convertUTCtoLocalTime, parseDate } from '../utils/date';
 
 export default function Home({ all_posts, newsletter, events }) {
-  
-  // console.log("This is all post from axios", all_posts);
-  // console.log("These are all the newsletter from storyblok", newsletter);
-  // console.log("These are all the events", events)
+  const [toggled, setToggled] = useState(false);
+
+  // Event filtering
+  const [upcomingEvents, setUpcomingEvents] = useState([]);
+  const [pastEvents, setPastEvents] = useState([]);
+
+  useEffect(() => {
+    const getData = async () => {
+      const data = await fetchEvents();
+
+      const upcomingEvents = [];
+      const pastEvents = [];
+
+      for (let i = 0; i < data.length; i++) {
+        const event = data[i];
+        console.log("This is all the event", event);
+
+        const currentTime = new Date().getTime();
+        const eventTime = convertUTCtoLocalTime(
+          parseDate(event.content.EventTime).getTime()
+        );
+
+        console.log("This is the event time:" + eventTime)
+
+        if (eventTime >= currentTime) {
+          upcomingEvents.push(event);
+        } else {
+          pastEvents.push(event);
+        }
+      }
+
+      upcomingEvents.sort((a, b) => {
+        const aEventTime = parseDate(a.content.EventTime).getTime();
+        const bEventTime = parseDate(b.content.EventTime).getTime();
+
+        return aEventTime > bEventTime ? 1 : -1;
+      });
+
+      pastEvents.sort((a, b) => {
+        const aEventTime = parseDate(a.content.EventTime).getTime();
+        const bEventTime = parseDate(b.content.EventTime).getTime();
+
+        return aEventTime > bEventTime ? -1 : 1;
+      });
+
+      setUpcomingEvents(upcomingEvents);
+      setPastEvents(pastEvents);
+      console.log("Upcoming events", upcomingEvents);
+      console.log("Past events", pastEvents);
+    };
+
+    getData();
+  }, []);
+
+  // Toggle related setting
+  const handleClick = () => {
+    let pastToggleDekstop = document.getElementById('past-toggle-dekstop');
+    let upcomingToggleDekstop = document.getElementById('upcoming-toggle-dekstop');
+    let pastToggleMobile = document.getElementById('past-toggle-mobile');
+    let upcomingToggleMobile = document.getElementById('upcoming-toggle-mobile');
+    setToggled(current => !current);
+    if (!toggled) {
+      pastToggleDekstop.classList.add('active');
+      upcomingToggleDekstop.classList.remove('active');
+      pastToggleMobile.classList.add('active');
+      upcomingToggleMobile.classList.remove('active');
+    } else {
+      upcomingToggleDekstop.classList.add('active');
+      pastToggleDekstop.classList.remove('active');
+      upcomingToggleMobile.classList.add('active');
+      pastToggleMobile.classList.remove('active');
+    }
+  };
 
   return (
     <Layout pageTitle="Landing Page Nextjs">
@@ -37,62 +109,35 @@ export default function Home({ all_posts, newsletter, events }) {
           <Row className="align-items-center">
               <div className="event-title-container">
                   <div className="event-container-left">
+                    <div className="event-container">
                       <h3 className="event-title">
-                          Our Events
+                        Our Events
                       </h3>
-                      <p className="event-description">
-                      Over the past quarter, we’ve hosted 6 events across 4 continents bringing together over 6,000 web3 builders! In an industry as remote as web3, events are the glue to a strong community. Hosting weekly AMA’s, monthly IRL networking meetups, & quarterly hackathons is our secret recipe for spurring cross chain innovation. 
-                      </p>
+                      <div className="toggle-section-dekstop">
+                        <button disabled={!toggled} id="upcoming-toggle-dekstop" className="active" onClick={handleClick}>UPCOMING</button>
+                        <button disabled={toggled} id="past-toggle-dekstop" className="" onClick={handleClick}>PAST</button>
+                      </div>
+                    </div>
+                    <p className="event-description">
+                    Over the past quarter, we’ve hosted 6 events across 4 continents bringing together over 6,000 web3 builders! In an industry as remote as web3, events are the glue to a strong community. Hosting weekly AMA’s, monthly IRL networking meetups, & quarterly hackathons is our secret recipe for spurring cross chain innovation. 
+                    </p>
+                    <div className="toggle-section-mobile">
+                      <button disabled={!toggled} id="upcoming-toggle-mobile" className="active" onClick={handleClick}>UPCOMING</button>
+                      <button disabled={toggled} id="past-toggle-mobile" className="" onClick={handleClick}>PAST</button>
+                    </div>
                   </div>
               </div>
             <div className="event-content-container">
-              {
-                events.slice(0, 4).map(post => {
-                return <EventItem key={post.id} post={post} />
+              { !toggled ? (
+                upcomingEvents.map(post => {
+                return <EventItemUpcoming key={post.id} post={post} />
                 })
-              }
-              {
-                events.slice(0, 4).map(post => {
-                return <EventItem key={post.id} post={post} />
+              ) : (
+                pastEvents.map(post => {
+                return <EventItemPast key={post.id} post={post} />
                 })
-              }
-              {
-                events.slice(0, 4).map(post => {
-                return <EventItem key={post.id} post={post} />
-                })
-              }
-              {
-                events.slice(0, 4).map(post => {
-                return <EventItem key={post.id} post={post} />
-                })
-              }
-              {
-                events.slice(0, 4).map(post => {
-                return <EventItem key={post.id} post={post} />
-                })
-              }
-              {
-                events.slice(0, 4).map(post => {
-                return <EventItem key={post.id} post={post} />
-                })
-              }
-              {
-                events.slice(0, 4).map(post => {
-                return <EventItem key={post.id} post={post} />
-                })
-              }
-              {
-                events.slice(0, 4).map(post => {
-                return <EventItem key={post.id} post={post} />
-                })
-              }
-              {
-                events.slice(0, 4).map(post => {
-                return <EventItem key={post.id} post={post} />
-                })
-              }
+              ) } 
             </div>
-
           </Row>
         </Container>
       </section>
