@@ -71,6 +71,9 @@ const Header = () => {
               <NavLink href="#contact">Contact Us</NavLink>
             </NavItem>
           </Nav>
+          <a href={TELEGRAM_LINK} target="_blank" rel="noopener noreferrer" className="btn btn-secondary btn-header">
+            Join Us
+          </a>
           <div className="header-logo-mobile">
             <a href={TELEGRAM_LINK} target="_blank" rel="noopener noreferrer" className="header-menu">
                 <img className="header-icon" src="/tele-icon.svg" alt="telegram" />

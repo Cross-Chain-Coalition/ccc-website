@@ -39,12 +39,17 @@ opacity: 1;
 }
 
 .btn-header {
+    display:block;
     border-radius: 100px;
     border: 2px solid #09032F;
     padding: 5px 20px;
     background-color: white;
     color: black;
     font-family: "Space Grotes", -apple-system, sans-serif;
+}
+
+.header-logo-mobile {
+    display: none;
 }
 
 .no-scroll {
