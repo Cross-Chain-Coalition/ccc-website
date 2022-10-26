@@ -463,6 +463,7 @@ h5.event-description {
   font-weight: 700;
   padding: 15px;
   height: 130px;
+  color: #09032F;
 }
 
 .newsletter-content span {
@@ -742,9 +743,6 @@ footer {
   .logo-mobile {
     display: flex;
   }
-  .newsletter-content p {
-    color: #09032F;
-  }
   .newsletter-content span {
     color: #5E5E5E;
   }
@@ -835,6 +833,11 @@ footer {
   }
   .event-content-container {
     padding-top: 30px;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  .event-content-container::-webkit-scrollbar {
+    display: none;
   }
   .event-content {
     height: 400px;

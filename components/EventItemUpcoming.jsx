@@ -3,7 +3,7 @@ import { render } from "storyblok-rich-text-react-renderer";
 
 const EventItemUpcoming = ({post}) => {
     const {name, created_at, published_at, content: {
-        Image, Link, EventTime, Description, RegistrationLink
+        Image, EventTime, Description, RegistrationLink
     }} = post;
     const your_date_object = new Date();
     your_date_object.setTime(Date.parse( EventTime ));

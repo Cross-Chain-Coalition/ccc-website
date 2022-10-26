@@ -10,7 +10,7 @@ const NewsletterItem = ({post}) => {
     return (
         <div className="newsletter-content">
             <img src={Banner.filename} alt={Banner.alt} />
-            <p sytle={{"color":"#09032F"}}>
+            <p>
             {Text}
             </p>
             <div className="newsletter-content-details flex-space-between">
