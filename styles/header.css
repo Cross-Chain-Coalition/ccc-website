@@ -49,7 +49,20 @@ opacity: 1;
 
 .no-scroll {
     overflow-y: hidden;
-    position: fixed;
+    height:100%;
+}
+
+.blue-bg {
+    background: #5252FF !important;
+    color: #5252FF;
+}
+
+.blue { 
+    color: #5252FF;
+}
+
+.white {
+    fill: white;
 }
 
 @media screen and (max-width: 768px){
@@ -76,8 +89,8 @@ opacity: 1;
         border-top: 1px solid rgba(94, 94, 94, 0.12);
         height: 90vh;
     }
-    .navbar-nav {
-        margin-top: 30px;
+    .navbar-expand-md .navbar-nav {
+        margin-top: 50px;
     }
     .header .nav-item {
         padding: 0px
@@ -87,8 +100,21 @@ opacity: 1;
         font-weight: 800;
         font-family: Space Grotesk,  -apple-system, sans-serif;
         padding: 0px;
+        color: white;
     }
     .btn-header {
         display:none;
+    }
+    .header-logo-mobile {
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+        padding-top: 20vh;
+    }
+    .header-menu {
+        margin: 10px 30px;
+    }
+    .header-icon {
+        height: 44px;
     }
 }

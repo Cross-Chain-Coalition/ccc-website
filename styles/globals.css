@@ -729,6 +729,14 @@ footer {
   font-family: Space Grotesk,  -apple-system, sans-serif;
   font-weight: 800;
 }
+.btn-footer {
+  border-radius: 100px;
+  border: 2px solid #09032F;
+  padding: 5px 20px;
+  background-color: white;
+  color: black;
+  font-family: "Space Grotes", -apple-system, sans-serif;
+}
 
 /* Mobile */
 
@@ -763,7 +771,7 @@ footer {
   }
   .navbar-toggler {
     border: none;
-    color: none transparent;
+    color: white;
   }
   .hero-title {
     font-size: 44px;
@@ -966,6 +974,23 @@ footer {
   }
   #newsletter-cta-container {
     padding-bottom: 50%;
+  }
+  .footer-container {
+    background-color: #0C1C21;
+    background-image:url("/welcome_bg.svg");
+  }
+  .footer-logo {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 40px 0px;
+}
+  .footer-menu {
+    margin: 10px 30px;
+    font-size: 20px;
+  }
+  .footer-icon {
+    height: 44px;
   }
   .v203_7341 {
     width: 90%;
