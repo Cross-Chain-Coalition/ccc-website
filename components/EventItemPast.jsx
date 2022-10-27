@@ -11,10 +11,11 @@ const EventItemPast = ({post}) => {
 
     const min = your_date_object.getUTCMinutes();
     const hour = your_date_object.getUTCHours();
-    console.log(hour, min)
     return (
         <div className="event-content">
-            <img src={Image.filename} alt={Image.alt} />
+            <div className="event-img">
+                <img src={Image.filename} alt={Image.alt} />
+            </div>
             <div>
                 <div style={{"padding":"5px 10px"}}>
                     <img src="/date.svg" alt="date icon" style={{"padding":"5px"}} />
@@ -23,7 +24,7 @@ const EventItemPast = ({post}) => {
                     </span>
                     <img src="/time.svg" alt="time icon" style={{"padding":"5px"}} />
                     <span>
-                        {hour + ":" + min}
+                        {hour + ":" + (min<10?'0':'') + min}
                     </span>
                 </div>
             </div>
@@ -34,7 +35,7 @@ const EventItemPast = ({post}) => {
             {render(Description)}
             </p>
             <div className="event-content-details flex-space-between">
-                <a href={RegistrationLink.url} target="_blank" rel="noopener noreferrer" className="btn btn-secondary btn-header">
+                <a href={RegistrationLink.url} target="_blank" rel="noopener noreferrer" className="btn btn-secondary btn-content">
                     Play Recording
                 </a>
             </div>

@@ -169,7 +169,7 @@ const Hero = () => {
           </Col>
           <Col lg={6}>
             <div className="mt-5 mt-lg-0">
-              <img src="/hero-image.png" alt="" className="img-fluid mx-auto d-block"/>
+              <img src="/hero_bg.png" alt="" className="img-fluid mx-auto d-block"/>
             </div>
           </Col>
         </Row>

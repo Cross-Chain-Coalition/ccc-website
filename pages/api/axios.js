@@ -39,7 +39,6 @@ export const fetchEvent = async (slug) => {
 export const fetchAllNewsletters = async (per_page = 10, page = 1) => {
     try {
         const { data } = await axiosInstance("/")
-        console.log("This is the Newsletter list", data);
         return data;
     } catch (error) {
         return error.message;

@@ -32,8 +32,6 @@ export const fetchNewsletters = async () => {
     return aTimestamp > bTimestamp ? -1 : 1;
   });
 
-  console.log("This is the newsletters", newsletters)
-
   return newsletters;
 };
 
