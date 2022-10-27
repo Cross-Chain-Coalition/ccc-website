@@ -18,7 +18,7 @@ cp .env.example .env
 
 After seeing your .env file, make sure to replace placeholders with your Storyblok Api Key
 
-STORYBLOK_ACCESS_TOKEN=YOUR_STORYBLOK_API_KEY
+NEXT_PUBLIC_STORYBLOK_ACCESS_TOKEN=YOUR_STORYBLOK_API_KEY
 ```
 
 ## Run

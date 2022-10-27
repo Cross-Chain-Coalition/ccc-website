@@ -3,7 +3,7 @@ import StoryblokClient from "storyblok-js-client";
 import { LATEST_BLOG_SHOW_CNT } from "./constants.js";
 
 const Storyblok = new StoryblokClient({
-  accessToken: "OhUQfj92QJ3nrnhk6o5Gdwtt",
+  accessToken: process.env.NEXT_PUBLIC_STORYBLOK_ACCESS_TOKEN,
   region: 'us'
 });
 

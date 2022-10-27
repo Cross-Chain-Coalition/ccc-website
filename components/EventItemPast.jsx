@@ -31,9 +31,9 @@ const EventItemPast = ({post}) => {
             <h5 style={{"fontSize":"24px","fontFamily":"Space Grotesk", "padding":"5px 15px"}}>
                 {name}
             </h5>
-            <p style={{"fontSize":"18px","fontFamily":"League Spartan", "padding":"0px"}}>
             {render(Description)}
-            </p>
+            {/* <p style={{"fontSize":"18px","fontFamily":"League Spartan", "padding":"0px"}}>
+            </p> */}
             <div className="event-content-details flex-space-between">
                 <a href={RegistrationLink.url} target="_blank" rel="noopener noreferrer" className="btn btn-secondary btn-content">
                     Play Recording

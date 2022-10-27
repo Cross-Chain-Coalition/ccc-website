@@ -4,7 +4,7 @@ export const axiosInstance = (path) => {
     const client = axios.get('https://api-us.storyblok.com/v2/cdn/stories',{
         params: {
             version: "draft",
-            token: "OhUQfj92QJ3nrnhk6o5Gdwtt"
+            token: process.env.NEXT_PUBLIC_STORYBLOK_ACCESS_TOKEN,
         },
         timeout: 5000
     });

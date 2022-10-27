@@ -22,7 +22,6 @@
   padding: 2rem 10%;
   padding-top: 14%;
   padding-bottom: 3%;
-  border-top: 1px solid #eaeaea;
   justify-content: space-between;
   align-items: center;
   background-color: #0C1C21;
@@ -126,9 +125,6 @@
 
 @media (prefers-color-scheme: dark) {
   .card,
-  .footer {
-    border-color: #222;
-  }
   .code {
     background: #111;
   }
