@@ -17,7 +17,7 @@ const NewsletterItem = ({post}) => {
                 <span sytle={{"color":"#5E5E5E","fontSize":"12px"}}>
                     {convertDateStringWithWeekDay(post.content.PublishDate, true)}
                 </span>
-                <a href={Link.url} target="_blank" rel="noopener noreferrer" className="btn btn-secondary btn-header">
+                <a href={Link.url} target="_blank" rel="noopener noreferrer" className="btn btn-secondary btn-content">
                     Read More
                 </a>
             </div>

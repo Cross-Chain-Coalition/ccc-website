@@ -3,7 +3,7 @@ import { Container, Row, Col, Button } from 'reactstrap';
 const Hero = () => {
   return (
     <section id="newsletter-cta" className="position-relative">
-      <Container id="newsletter-cta-container">
+      <Container id="newsletter-cta-container" className="g-0">
         <div className="newsletter-form">
           <div className="subscribe-form-container">
               <div className="join">Join our newsletter</div>

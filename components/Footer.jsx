@@ -48,6 +48,17 @@ const Footer = () => {
                     Contact us
                 </a>
             </div>
+            <div className="footer-dekstop">
+                <a href={TELEGRAM_LINK} target="_blank" rel="noopener noreferrer" className="footer-menu">
+                    <img className="footer-icon" src="/tele-icon.svg" alt="telegram" />
+                </a>
+                <a href={SUBSTACK_LINK} target="_blank" rel="noopener noreferrer" className="footer-menu">
+                    <img className="footer-icon" src="/substack-icon.svg" alt="substack" />
+                </a>
+                <a href={TWITTER_LINK} target="_blank" rel="noopener noreferrer" className="footer-menu">
+                    <img className="footer-icon" src="/twitter-icon.svg" alt="twitter" />
+                </a>
+            </div>
         </footer>
         <div className="footer-logo">
             <a href={TELEGRAM_LINK} target="_blank" rel="noopener noreferrer" className="footer-menu">
