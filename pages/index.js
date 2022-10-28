@@ -35,14 +35,11 @@ export default function Home({ all_posts, newsletter, events }) {
 
       for (let i = 0; i < data.length; i++) {
         const event = data[i];
-        console.log("This is all the event", event);
 
         const currentTime = new Date().getTime();
         const eventTime = convertUTCtoLocalTime(
           parseDate(event.content.EventTime).getTime()
         );
-
-        console.log("This is the event time:" + eventTime)
 
         if (eventTime >= currentTime) {
           upcomingEvents.push(event);
@@ -67,8 +64,6 @@ export default function Home({ all_posts, newsletter, events }) {
 
       setUpcomingEvents(upcomingEvents);
       setPastEvents(pastEvents);
-      console.log("Upcoming events", upcomingEvents);
-      console.log("Past events", pastEvents);
     };
 
     getData();

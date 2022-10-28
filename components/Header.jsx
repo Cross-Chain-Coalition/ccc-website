@@ -26,7 +26,6 @@ const Header = () => {
     const header = document.getElementById('header');
     
     header.classList.toggle('blue-bg')
-    console.log(header.classList.contains('blue-bg'))
     const newColor = logoColor == "black" ? "white" : "black";
     const newBgColor = logoColor == "white" ? "#5252FF" : "white";
     setLogoColor(newColor);
