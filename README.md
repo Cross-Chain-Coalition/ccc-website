@@ -14,11 +14,11 @@ cd ccc-website
 ### Local Development
 
 # Getting environment variables set
-cp .env.example .env
+cp .env.example .env.local
 
-After seeing your .env file, make sure to replace placeholders with your Storyblok Api Key
+After seeing your .env.local file, make sure to replace placeholders with your Storyblok Api Key
 
-NEXT_PUBLIC_STORYBLOK_ACCESS_TOKEN=YOUR_STORYBLOK_API_KEY
+STORYBLOK_ACCESS_TOKEN=YOUR_STORYBLOK_API_KEY
 ```
 
 ## Run
